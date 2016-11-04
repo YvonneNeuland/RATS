@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Game>
+    <GameData WhipDamageUpgradePoints="5" WhipFireRateUpgradePoints="3" SpreadDamageUpgradePoints="0" SpreadFireRateUpgradePoints="0" MissileDamageUpgradePoints="0" MissileFireRateUpgradePoints="0" NumUpgradePoints="3" />
+    <LevelData>
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+        <Level Score="0" Star1="0" Star2="0" Star3="0" Unlocked="1" />
+    </LevelData>
+</Game>

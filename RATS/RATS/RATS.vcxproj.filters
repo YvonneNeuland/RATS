@@ -1,0 +1,738 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Modules">
+      <UniqueIdentifier>{285c5262-36bd-4d22-8b55-16d2d0073bce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Renderer">
+      <UniqueIdentifier>{6bb8ffe5-2d6e-4478-8b68-46f10e08f877}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Global">
+      <UniqueIdentifier>{e9078e85-2c0e-426d-a687-d0cc7bb4bc35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Renderer\Shaders">
+      <UniqueIdentifier>{ae2ce825-2292-4544-b48e-ce2f64cf45f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\ObjectManager">
+      <UniqueIdentifier>{f7eac83e-2cda-4b58-bd18-12efcaff3785}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Input">
+      <UniqueIdentifier>{af2fb547-6afa-454f-bc90-e709b734a807}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\AssetManager">
+      <UniqueIdentifier>{e0b0d60d-2e50-453a-8bc4-9e02ebbe1ed9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\LevelManager">
+      <UniqueIdentifier>{db21bb8b-bab6-41d0-bb65-b401306e151d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\AI">
+      <UniqueIdentifier>{f867f647-101f-4043-8551-673a481992a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\True Messages">
+      <UniqueIdentifier>{a944c4ee-a90d-431f-8612-70d9d5590137}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Collision">
+      <UniqueIdentifier>{8cbfec73-83ac-4157-8352-547c3d514f7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Fonts">
+      <UniqueIdentifier>{5f6e853c-4612-40b4-8292-cc6188533e7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\States">
+      <UniqueIdentifier>{7bb8c4f6-7b76-40b2-9519-7fa0f6a3c691}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Components">
+      <UniqueIdentifier>{f114fc10-9f30-4485-bbb5-3488ecbcabf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Factory">
+      <UniqueIdentifier>{4e4c5baf-34d2-444c-b302-9b564abfebfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Visual Effects">
+      <UniqueIdentifier>{a3eceeb4-16d4-420b-99de-61b6af9b0a69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Visual Effects\VFX Base">
+      <UniqueIdentifier>{3c187d34-5fb6-40c6-8cd4-03dce0d841bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Visual Effects\Particle System">
+      <UniqueIdentifier>{13592639-a58c-47cc-8fa2-5866b096e8d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Visual Effects\Ribbon">
+      <UniqueIdentifier>{f547a726-b057-4d21-becd-baf669d48ac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Visual Effects\Animated Texture">
+      <UniqueIdentifier>{0425487b-dfa2-4a4f-9353-5fb7f349c03c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Visual Effects\Electricity Effect">
+      <UniqueIdentifier>{99279868-49ba-49ba-aa58-736b970e90f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\TinyXml">
+      <UniqueIdentifier>{1918a6b8-2ce2-48af-bd92-65053605d82e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Components\Movement">
+      <UniqueIdentifier>{dbc15437-153d-417c-bfb0-8d686450b38c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Upgrade System">
+      <UniqueIdentifier>{33b739b4-ef2c-427d-91d9-10239e8f7901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log Files">
+      <UniqueIdentifier>{fe82e22c-c536-4433-825f-902b3802e3df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\AI\Bullet Behaviors">
+      <UniqueIdentifier>{3398bfac-2ec0-4978-9a74-b08b8c607614}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\Molecules">
+      <UniqueIdentifier>{5c2e7a0a-8ce5-4704-89be-2c478d25687e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RATS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Renderer\Renderer.h">
+      <Filter>Modules\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Renderer\D3DGraphics.h">
+      <Filter>Modules\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Modules\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Wwise files\Event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wwise files\EventArgs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wwise files\EventManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wwise files\Transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Input\IBaseModule.h">
+      <Filter>Modules\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Input\InputController.h">
+      <Filter>Modules\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Input\InputManager.h">
+      <Filter>Modules\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Input\MessageSystem.h">
+      <Filter>Modules\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Input\Interface.h">
+      <Filter>Modules\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Input\Delegate.h">
+      <Filter>Modules\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Input\RootDelegate.h">
+      <Filter>Modules\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Object Manager\BaseObject.h">
+      <Filter>Modules\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Object Manager\GameObject.h">
+      <Filter>Modules\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Input\IWindProc.h">
+      <Filter>Modules\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Asset Manager\DDSTextureLoader.h">
+      <Filter>Modules\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Asset Manager\AssetManager.h">
+      <Filter>Modules\AssetManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\AICompBase.h">
+      <Filter>Modules\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\AIManager.h">
+      <Filter>Modules\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Level Manager\Level.h">
+      <Filter>Modules\LevelManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Level Manager\Wave.h">
+      <Filter>Modules\LevelManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Collision\ColliderComp.h">
+      <Filter>Modules\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\BitmapFont\BitmapFont.h">
+      <Filter>Modules\Fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\BitmapFont\BitmapFontManager.h">
+      <Filter>Modules\Fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\BaseState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\StateManager.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Components\BaseComponent.h">
+      <Filter>Modules\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Collision\CollisionManager.h">
+      <Filter>Modules\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Components\HealthComponent.h">
+      <Filter>Modules\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Components\InputComponent.h">
+      <Filter>Modules\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Components\MovementCompBase.h">
+      <Filter>Modules\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Level Manager\LevelManager.h">
+      <Filter>Modules\LevelManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Object Manager\ObjectManager.h">
+      <Filter>Modules\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\VFX\AnimTexture\AnimTexture.h">
+      <Filter>Modules\Visual Effects\Animated Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\VFX\ElectricityEffect\ElectricityEffect.h">
+      <Filter>Modules\Visual Effects\Electricity Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\VFX\RibbonEffect\RibbonEffect.h">
+      <Filter>Modules\Visual Effects\Ribbon</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\VFX\VisualEffect\VisualEffect.h">
+      <Filter>Modules\Visual Effects\VFX Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\CreditsState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\GamePlayState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\LoadMenuState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\MainMenuState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\OptionsMenuState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\PauseMenuState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\SplashScreenState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Renderer\RenderComp.h">
+      <Filter>Modules\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\TinyXml\tinystr.h">
+      <Filter>Modules\TinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\TinyXml\tinyxml.h">
+      <Filter>Modules\TinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Object Manager\ObjectFactory.h">
+      <Filter>Modules\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="XTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Object Manager\CameraObject.h">
+      <Filter>Modules\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Input\ThreeSixty.h">
+      <Filter>Modules\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Components\Movement\GroundFollowComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\HowToPlayState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\SaveMenuState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\SoundOptionState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\BaseBehavior.h">
+      <Filter>Modules\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\BehavTracking.h">
+      <Filter>Modules\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\BehavShoot.h">
+      <Filter>Modules\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\GraphicsOptionsState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\KeybindingsOptionsState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Upgrade System\GameData.h">
+      <Filter>Modules\Upgrade System</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Upgrade System\PlayerData.h">
+      <Filter>Modules\Upgrade System</Filter>
+    </ClInclude>
+    <ClInclude Include="Log Files\DXLog.h">
+      <Filter>Log Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Log Files\Log.h">
+      <Filter>Log Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Log Files\Log.hpp">
+      <Filter>Log Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\Bullet Behaviors\BehavWhipBullet.h">
+      <Filter>Modules\AI\Bullet Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\UpgradeShipState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Audio\FFmod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Debug Keys\DebugKeys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\ResultState.h">
+      <Filter>Modules\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\VFX\MeshDistorter\MeshDistorter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Molecules\Molecule.h">
+      <Filter>Modules\Molecules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Molecules\MoleculeEmitter.h">
+      <Filter>Modules\Molecules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Molecules\MoleculeManager.h">
+      <Filter>Modules\Molecules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\BehavEnvMove.h">
+      <Filter>Modules\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\BehavFlocking.h">
+      <Filter>Modules\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\BehavSpawning.h">
+      <Filter>Modules\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\BehavRandMove.h">
+      <Filter>Modules\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\BehavProxMine.h">
+      <Filter>Modules\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\BehavProminence.h">
+      <Filter>Modules\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\BehavProminenceBullet.h">
+      <Filter>Modules\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\States\LevelSelectState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\BehavDodge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\BehavGoliath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\BehavBoss.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Components\GlowComponent.h">
+      <Filter>Modules\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\AI\BehavLandPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Renderer\TextManip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Renderer\Renderer.cpp">
+      <Filter>Modules\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Renderer\D3DGraphics.cpp">
+      <Filter>Modules\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Modules\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Wwise files\EventManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Wwise files\Transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RATS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Input\InputController.cpp">
+      <Filter>Modules\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Input\InputManager.cpp">
+      <Filter>Modules\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Input\MessageSystem.cpp">
+      <Filter>Modules\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Object Manager\BaseObject.cpp">
+      <Filter>Modules\ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Object Manager\GameObject.cpp">
+      <Filter>Modules\ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Asset Manager\DDSTextureLoader.cpp">
+      <Filter>Modules\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Asset Manager\AssetManager.cpp">
+      <Filter>Modules\AssetManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\AICompBase.cpp">
+      <Filter>Modules\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\AIManager.cpp">
+      <Filter>Modules\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Level Manager\Wave.cpp">
+      <Filter>Modules\LevelManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Level Manager\Level.cpp">
+      <Filter>Modules\LevelManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Collision\ColliderComp.cpp">
+      <Filter>Modules\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\BitmapFont\BitmapFont.cpp">
+      <Filter>Modules\Fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\BitmapFont\BitmapFontManager.cpp">
+      <Filter>Modules\Fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\StateManager.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Components\BaseComponent.cpp">
+      <Filter>Modules\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Collision\CollisionManager.cpp">
+      <Filter>Modules\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Components\HealthComponent.cpp">
+      <Filter>Modules\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Components\InputComponent.cpp">
+      <Filter>Modules\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Components\MovementCompBase.cpp">
+      <Filter>Modules\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Level Manager\LevelManager.cpp">
+      <Filter>Modules\LevelManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Object Manager\ObjectManager.cpp">
+      <Filter>Modules\ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\VFX\AnimTexture\AnimTexture.cpp">
+      <Filter>Modules\Visual Effects\Animated Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\VFX\ElectricityEffect\ElectricityEffect.cpp">
+      <Filter>Modules\Visual Effects\Electricity Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\VFX\RibbonEffect\RibbonEffect.cpp">
+      <Filter>Modules\Visual Effects\Ribbon</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\VFX\VisualEffect\VisualEffect.cpp">
+      <Filter>Modules\Visual Effects\VFX Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\SplashScreenState.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\PauseMenuState.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\OptionsMenuState.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\MainMenuState.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\LoadMenuState.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\GamePlayState.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\CreditsState.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Renderer\RenderComp.cpp">
+      <Filter>Modules\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\TinyXml\tinystr.cpp">
+      <Filter>Modules\TinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\TinyXml\tinyxml.cpp">
+      <Filter>Modules\TinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\TinyXml\tinyxmlerror.cpp">
+      <Filter>Modules\TinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\TinyXml\tinyxmlparser.cpp">
+      <Filter>Modules\TinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Object Manager\ObjectFactory.cpp">
+      <Filter>Modules\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="XTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Object Manager\CameraObject.cpp">
+      <Filter>Modules\ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Input\ThreeSixty.cpp">
+      <Filter>Modules\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Components\Movement\GroundFollowComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\HowToPlayState.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\SaveMenuState.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\SoundOptionState.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\BaseBehavior.cpp">
+      <Filter>Modules\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\BehavShoot.cpp">
+      <Filter>Modules\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\BehavTracking.cpp">
+      <Filter>Modules\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\GraphicsOptionsState.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\KeybindingsOptionsState.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Upgrade System\GameData.cpp">
+      <Filter>Modules\Upgrade System</Filter>
+    </ClCompile>
+    <ClCompile Include="Log Files\DXLog.cpp">
+      <Filter>Log Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Log Files\Log.cpp">
+      <Filter>Log Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\Bullet Behaviors\BehavWhipBullet.cpp">
+      <Filter>Modules\AI\Bullet Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\UpgradeShipState.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Audio\FFmod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Debug Keys\DebugKeys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\ResultState.cpp">
+      <Filter>Modules\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\VFX\MeshDistorter\MeshDistorter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Molecules\Molecule.cpp">
+      <Filter>Modules\Molecules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Molecules\MoleculeEmitter.cpp">
+      <Filter>Modules\Molecules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Molecules\MoleculeManager.cpp">
+      <Filter>Modules\Molecules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\BehavEnvMove.cpp">
+      <Filter>Modules\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\BehavFlocking.cpp">
+      <Filter>Modules\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\BehavProminence.cpp">
+      <Filter>Modules\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\BehavProxMine.cpp">
+      <Filter>Modules\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\BehavRandMove.cpp">
+      <Filter>Modules\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\BehavSpawning.cpp">
+      <Filter>Modules\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\BehavProminenceBullet.cpp">
+      <Filter>Modules\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\States\LevelSelectState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\BehavDodge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\BehavGoliath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\BehavBoss.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Components\GlowComponent.cpp">
+      <Filter>Modules\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\AI\BehavLandPoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Renderer\TextManip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RATS.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RATS.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\Mark\Desktop\Health Bar.png">
+      <Filter>Modules\Fonts</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Modules\Renderer\Shaders\Generic_PS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Generic_VS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Skybox_PS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Skybox_VS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\TwoD_PS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\TwoD_VS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\InstancedGeneric_PS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\InstancedGeneric_VS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Sphere_PS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Fade_PS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Bullet_PS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Line_PS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Particle_PS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Particle_VS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Particle_CS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\InitParticle_CS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\InstancedScale_VS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Healthbar_PS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Ribbon_VS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Ribbon_GS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Ribbon_PS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\InstancedBillboard_VS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\InstancedWhite_PS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\ParticleBillboardZ_VS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\DistortionWave_PS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\Billboard_VS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Modules\Renderer\Shaders\ScrollingUV_PS.hlsl">
+      <Filter>Modules\Renderer\Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

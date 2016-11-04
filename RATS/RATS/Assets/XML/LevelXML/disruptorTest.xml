@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <level numLevel="0" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="4" numEnemies="6" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="4" numEnemies="9" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="4" numEnemies="9" />
+      <enemyInfo enemyType="3" numEnemies="6" />
+    </wave>
+  </level>
+</Root>

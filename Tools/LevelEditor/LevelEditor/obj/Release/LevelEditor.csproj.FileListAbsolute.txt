@@ -1,0 +1,9 @@
+C:\PerforceWork\Studios\1602 - Pragma Twice\High Fructose\Actual Project\Tools\LevelEditor\LevelEditor\bin\Release\LevelEditor.exe.config
+C:\PerforceWork\Studios\1602 - Pragma Twice\High Fructose\Actual Project\Tools\LevelEditor\LevelEditor\bin\Release\LevelEditor.exe
+C:\PerforceWork\Studios\1602 - Pragma Twice\High Fructose\Actual Project\Tools\LevelEditor\LevelEditor\bin\Release\LevelEditor.pdb
+C:\PerforceWork\Studios\1602 - Pragma Twice\High Fructose\Actual Project\Tools\LevelEditor\LevelEditor\obj\Release\LevelEditor.csprojResolveAssemblyReference.cache
+C:\PerforceWork\Studios\1602 - Pragma Twice\High Fructose\Actual Project\Tools\LevelEditor\LevelEditor\obj\Release\LevelEditor.Form1.resources
+C:\PerforceWork\Studios\1602 - Pragma Twice\High Fructose\Actual Project\Tools\LevelEditor\LevelEditor\obj\Release\LevelEditor.Properties.Resources.resources
+C:\PerforceWork\Studios\1602 - Pragma Twice\High Fructose\Actual Project\Tools\LevelEditor\LevelEditor\obj\Release\LevelEditor.csproj.GenerateResource.Cache
+C:\PerforceWork\Studios\1602 - Pragma Twice\High Fructose\Actual Project\Tools\LevelEditor\LevelEditor\obj\Release\LevelEditor.exe
+C:\PerforceWork\Studios\1602 - Pragma Twice\High Fructose\Actual Project\Tools\LevelEditor\LevelEditor\obj\Release\LevelEditor.pdb

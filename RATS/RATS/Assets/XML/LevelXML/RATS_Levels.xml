@@ -1,0 +1,1285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <level numLevel="0" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="3" numEnemies="3" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="3" numEnemies="5" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="3" numEnemies="9" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="3" numEnemies="9" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="3" numEnemies="10" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="3" numEnemies="11" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="3" numEnemies="15" />
+    </wave>
+  </level>
+  <level numLevel="1" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="4" numEnemies="3" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="4" numEnemies="5" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="4" numEnemies="7" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="4" numEnemies="7" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="4" numEnemies="9" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="4" numEnemies="9" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="4" numEnemies="10" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="4" numEnemies="11" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="4" numEnemies="15" />
+    </wave>
+  </level>
+  <level numLevel="2" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="2" numEnemies="3" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="2" numEnemies="5" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="2" numEnemies="7" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="2" numEnemies="7" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="2" numEnemies="9" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="2" numEnemies="9" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="2" numEnemies="10" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="2" numEnemies="11" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="2" numEnemies="15" />
+    </wave>
+  </level>
+  <level numLevel="3" levelShape="RoundedCube">
+    <wave numWave="0">
+      <enemyInfo enemyType="3" numEnemies="3" />
+      <enemyInfo enemyType="4" numEnemies="3" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="3" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="3" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="4" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="3" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="4" numEnemies="5" />
+      <enemyInfo enemyType="3" numEnemies="5" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="3" numEnemies="5" />
+      <enemyInfo enemyType="2" numEnemies="5" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="4" numEnemies="5" />
+      <enemyInfo enemyType="2" numEnemies="5" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="3" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="5" />
+      <enemyInfo enemyType="2" numEnemies="5" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="5" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="2" numEnemies="15" />
+      <enemyInfo enemyType="3" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="5" />
+    </wave>
+  </level>
+  <level numLevel="4" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="5" numEnemies="3" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="5" numEnemies="5" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="5" numEnemies="7" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="5" numEnemies="7" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="5" numEnemies="9" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="5" numEnemies="9" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="5" numEnemies="10" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="5" numEnemies="11" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="5" numEnemies="15" />
+    </wave>
+  </level>
+  <level numLevel="5" levelShape="Torus">
+    <wave numWave="0">
+      <enemyInfo enemyType="5" numEnemies="3" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="5" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="9" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="2" numEnemies="9" />
+      <enemyInfo enemyType="5" numEnemies="5" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="3" numEnemies="7" />
+      <enemyInfo enemyType="5" numEnemies="5" />
+      <enemyInfo enemyType="2" numEnemies="5" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="2" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="9" />
+      <enemyInfo enemyType="5" numEnemies="5" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+      <enemyInfo enemyType="2" numEnemies="5" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="2" numEnemies="5" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="5" numEnemies="9" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="5" numEnemies="9" />
+      <enemyInfo enemyType="3" numEnemies="9" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="2" numEnemies="5" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="2" numEnemies="9" />
+      <enemyInfo enemyType="3" numEnemies="9" />
+      <enemyInfo enemyType="4" numEnemies="9" />
+      <enemyInfo enemyType="5" numEnemies="9" />
+    </wave>
+  </level>
+  <level numLevel="6" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="6" numEnemies="1" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="5" numEnemies="5" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="2" numEnemies="5" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="3" numEnemies="7" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="2" numEnemies="5" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="6" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="3" numEnemies="7" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="5" numEnemies="5" />
+      <enemyInfo enemyType="6" numEnemies="3" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="6" numEnemies="3" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+    </wave>
+  </level>
+  <level numLevel="7" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="7" numEnemies="1" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="7" numEnemies="2" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="7" numEnemies="2" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="7" numEnemies="2" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="7" numEnemies="3" />
+      <enemyInfo enemyType="4" numEnemies="12" />
+      <enemyInfo enemyType="5" numEnemies="9" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="5" numEnemies="9" />
+      <enemyInfo enemyType="4" numEnemies="9" />
+      <enemyInfo enemyType="3" numEnemies="9" />
+      <enemyInfo enemyType="2" numEnemies="9" />
+    </wave>
+  </level>
+  <level numLevel="8" levelShape="Torus">
+    <wave numWave="0">
+      <enemyInfo enemyType="2" numEnemies="9" />
+      <enemyInfo enemyType="3" numEnemies="9" />
+      <enemyInfo enemyType="4" numEnemies="9" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="5" numEnemies="9" />
+      <enemyInfo enemyType="4" numEnemies="9" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="3" numEnemies="9" />
+      <enemyInfo enemyType="2" numEnemies="9" />
+      <enemyInfo enemyType="6" numEnemies="2" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="7" numEnemies="2" />
+      <enemyInfo enemyType="3" numEnemies="9" />
+      <enemyInfo enemyType="5" numEnemies="9" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="7" numEnemies="2" />
+      <enemyInfo enemyType="2" numEnemies="9" />
+      <enemyInfo enemyType="3" numEnemies="9" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="2" numEnemies="9" />
+      <enemyInfo enemyType="3" numEnemies="9" />
+      <enemyInfo enemyType="4" numEnemies="9" />
+      <enemyInfo enemyType="6" numEnemies="3" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="7" numEnemies="3" />
+      <enemyInfo enemyType="4" numEnemies="9" />
+      <enemyInfo enemyType="2" numEnemies="9" />
+      <enemyInfo enemyType="3" numEnemies="9" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="7" numEnemies="2" />
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="3" numEnemies="12" />
+      <enemyInfo enemyType="5" numEnemies="9" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="5" numEnemies="9" />
+      <enemyInfo enemyType="3" numEnemies="9" />
+      <enemyInfo enemyType="4" numEnemies="9" />
+      <enemyInfo enemyType="2" numEnemies="9" />
+    </wave>
+  </level>
+  <level numLevel="9" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="1" numEnemies="3" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="1" numEnemies="4" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="1" numEnemies="5" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="9" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="3" numEnemies="9" />
+      <enemyInfo enemyType="1" numEnemies="3" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="4" numEnemies="9" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="5" numEnemies="9" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="8" numEnemies="1" />
+    </wave>
+  </level>
+  <level numLevel="10" levelShape="RoundedCube">
+    <wave numWave="0">
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="1" numEnemies="1" />
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="1" numEnemies="1" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="4" numEnemies="12" />
+      <enemyInfo enemyType="5" numEnemies="5" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="1" numEnemies="1" />
+      <enemyInfo enemyType="2" numEnemies="9" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="1" numEnemies="1" />
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="5" numEnemies="9" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="1" numEnemies="1" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="5" numEnemies="12" />
+      <enemyInfo enemyType="4" numEnemies="5" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="1" numEnemies="1" />
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="3" numEnemies="12" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="1" numEnemies="3" />
+    </wave>
+  </level>
+  <level numLevel="11" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="2" numEnemies="3" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="3" numEnemies="3" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="3" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="3" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="5" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="3" numEnemies="7" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="10" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="3" numEnemies="13" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="2" numEnemies="13" />
+      <enemyInfo enemyType="3" numEnemies="13" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="3" numEnemies="20" />
+      <enemyInfo enemyType="2" numEnemies="20" />
+    </wave>
+  </level>
+  <level numLevel="12" levelShape="RoundedCube">
+    <wave numWave="0">
+      <enemyInfo enemyType="4" numEnemies="3" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="4" numEnemies="5" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="4" numEnemies="5" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="4" numEnemies="10" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="4" numEnemies="13" />
+      <enemyInfo enemyType="2" numEnemies="15" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="3" numEnemies="10" />
+      <enemyInfo enemyType="4" numEnemies="10" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="2" numEnemies="15" />
+      <enemyInfo enemyType="4" numEnemies="12" />
+      <enemyInfo enemyType="3" numEnemies="10" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="3" numEnemies="15" />
+      <enemyInfo enemyType="4" numEnemies="15" />
+      <enemyInfo enemyType="2" numEnemies="20" />
+    </wave>
+  </level>
+  <level numLevel="13" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="6" numEnemies="3" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="6" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="6" numEnemies="3" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="6" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="6" numEnemies="3" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="6" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="6" numEnemies="5" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="6" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="10" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="6" numEnemies="7" />
+      <enemyInfo enemyType="4" numEnemies="15" />
+      <enemyInfo enemyType="2" numEnemies="15" />
+    </wave>
+  </level>
+  <level numLevel="14" levelShape="Torus">
+    <wave numWave="0">
+      <enemyInfo enemyType="5" numEnemies="3" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="5" numEnemies="3" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="5" numEnemies="3" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="10" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="3" numEnemies="10" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="5" numEnemies="10" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="4" numEnemies="10" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="5" numEnemies="10" />
+      <enemyInfo enemyType="6" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="2" numEnemies="15" />
+      <enemyInfo enemyType="5" numEnemies="15" />
+      <enemyInfo enemyType="3" numEnemies="15" />
+    </wave>
+  </level>
+  <level numLevel="15" levelShape="RoundedCube">
+    <wave numWave="0">
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="7" numEnemies="2" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="4" numEnemies="10" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="7" numEnemies="2" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="3" numEnemies="10" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="7" numEnemies="2" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="7" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="4" numEnemies="10" />
+      <enemyInfo enemyType="5" numEnemies="5" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="7" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="4" numEnemies="10" />
+      <enemyInfo enemyType="3" numEnemies="10" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="7" numEnemies="3" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="2" numEnemies="12" />
+      <enemyInfo enemyType="3" numEnemies="10" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="7" numEnemies="3" />
+      <enemyInfo enemyType="6" numEnemies="3" />
+      <enemyInfo enemyType="5" numEnemies="5" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="7" numEnemies="3" />
+      <enemyInfo enemyType="4" numEnemies="10" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="3" numEnemies="10" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="3" numEnemies="15" />
+      <enemyInfo enemyType="4" numEnemies="15" />
+      <enemyInfo enemyType="2" numEnemies="15" />
+      <enemyInfo enemyType="6" numEnemies="5" />
+      <enemyInfo enemyType="5" numEnemies="5" />
+    </wave>
+  </level>
+  <level numLevel="16" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="1" numEnemies="3" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="1" numEnemies="5" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="1" numEnemies="5" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="1" numEnemies="5" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="4" numEnemies="10" />
+      <enemyInfo enemyType="7" numEnemies="1" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="1" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="10" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="8" numEnemies="1" />
+    </wave>
+  </level>
+  <level numLevel="17" levelShape="Torus">
+    <wave numWave="0">
+      <enemyInfo enemyType="5" numEnemies="10" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="4" numEnemies="10" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="5" numEnemies="10" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="7" numEnemies="1" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="5" numEnemies="10" />
+      <enemyInfo enemyType="4" numEnemies="10" />
+      <enemyInfo enemyType="1" numEnemies="1" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="5" numEnemies="10" />
+      <enemyInfo enemyType="3" numEnemies="10" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="5" numEnemies="10" />
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="4" numEnemies="10" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="5" numEnemies="10" />
+      <enemyInfo enemyType="7" numEnemies="2" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="2" numEnemies="20" />
+      <enemyInfo enemyType="5" numEnemies="20" />
+      <enemyInfo enemyType="4" numEnemies="10" />
+      <enemyInfo enemyType="3" numEnemies="10" />
+    </wave>
+  </level>
+  <level numLevel="18" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="3" numEnemies="5" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="1" numEnemies="4" />
+      <enemyInfo enemyType="2" numEnemies="4" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="5" numEnemies="5" />
+      <enemyInfo enemyType="3" numEnemies="6" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="2" numEnemies="9" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="4" numEnemies="4" />
+      <enemyInfo enemyType="3" numEnemies="5" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="5" numEnemies="4" />
+      <enemyInfo enemyType="2" numEnemies="4" />
+      <enemyInfo enemyType="3" numEnemies="8" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="2" numEnemies="11" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="5" numEnemies="5" />
+      <enemyInfo enemyType="3" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="5" />
+      <enemyInfo enemyType="2" numEnemies="5" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="1" numEnemies="5" />
+      <enemyInfo enemyType="3" numEnemies="10" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+    </wave>
+  </level>
+  <level numLevel="19" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="3" numEnemies="4" />
+      <enemyInfo enemyType="6" numEnemies="2" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="4" numEnemies="6" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="1" numEnemies="4" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="5" numEnemies="5" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="3" numEnemies="6" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="2" numEnemies="8" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="4" numEnemies="8" />
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="6" numEnemies="2" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="2" numEnemies="4" />
+      <enemyInfo enemyType="3" numEnemies="9" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="6" numEnemies="3" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="6" numEnemies="3" />
+      <enemyInfo enemyType="1" numEnemies="1" />
+      <enemyInfo enemyType="3" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+    </wave>
+  </level>
+  <level numLevel="20" levelShape="RoundedCube">
+    <wave numWave="0">
+      <enemyInfo enemyType="2" numEnemies="5" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="2" numEnemies="6" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="5" numEnemies="4" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="3" numEnemies="6" />
+      <enemyInfo enemyType="4" numEnemies="6" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="2" numEnemies="6" />
+      <enemyInfo enemyType="3" numEnemies="6" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="7" numEnemies="2" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="3" numEnemies="10" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="2" numEnemies="4" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="4" numEnemies="10" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="1" numEnemies="4" />
+      <enemyInfo enemyType="6" numEnemies="4" />
+      <enemyInfo enemyType="5" numEnemies="4" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+    </wave>
+  </level>
+  <level numLevel="21" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="2" numEnemies="6" />
+      <enemyInfo enemyType="3" numEnemies="6" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="4" numEnemies="6" />
+      <enemyInfo enemyType="2" numEnemies="6" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="2" numEnemies="6" />
+      <enemyInfo enemyType="3" numEnemies="6" />
+      <enemyInfo enemyType="4" numEnemies="6" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="5" numEnemies="6" />
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="7" numEnemies="2" />
+      <enemyInfo enemyType="2" numEnemies="6" />
+      <enemyInfo enemyType="3" numEnemies="6" />
+      <enemyInfo enemyType="4" numEnemies="6" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="6" numEnemies="3" />
+      <enemyInfo enemyType="5" numEnemies="3" />
+      <enemyInfo enemyType="1" numEnemies="3" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="4" numEnemies="8" />
+      <enemyInfo enemyType="3" numEnemies="8" />
+      <enemyInfo enemyType="2" numEnemies="9" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="6" numEnemies="3" />
+      <enemyInfo enemyType="3" numEnemies="12" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="3" numEnemies="8" />
+      <enemyInfo enemyType="2" numEnemies="8" />
+      <enemyInfo enemyType="4" numEnemies="8" />
+      <enemyInfo enemyType="5" numEnemies="8" />
+    </wave>
+  </level>
+  <level numLevel="22" levelShape="Torus">
+    <wave numWave="0">
+      <enemyInfo enemyType="2" numEnemies="3" />
+      <enemyInfo enemyType="5" numEnemies="3" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="7" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="3" numEnemies="6" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="5" numEnemies="8" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="3" numEnemies="15" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="4" numEnemies="15" />
+      <enemyInfo enemyType="2" numEnemies="8" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="5" numEnemies="4" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="4" numEnemies="5" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="2" numEnemies="4" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="2" numEnemies="20" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="1" numEnemies="4" />
+      <enemyInfo enemyType="3" numEnemies="11" />
+    </wave>
+  </level>
+  <level numLevel="23" levelShape="RoundedCube">
+    <wave numWave="0">
+      <enemyInfo enemyType="3" numEnemies="4" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="3" numEnemies="4" />
+      <enemyInfo enemyType="4" numEnemies="6" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="2" numEnemies="6" />
+      <enemyInfo enemyType="5" numEnemies="4" />
+      <enemyInfo enemyType="6" numEnemies="2" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="7" numEnemies="2" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="5" numEnemies="2" />
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="2" numEnemies="8" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="3" numEnemies="8" />
+      <enemyInfo enemyType="4" numEnemies="8" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="5" numEnemies="10" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="6" numEnemies="4" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="3" numEnemies="10" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="5" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="8" numEnemies="1" />
+    </wave>
+  </level>
+  <level numLevel="24" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="5" numEnemies="5" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="7" numEnemies="2" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="2" numEnemies="6" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="2" numEnemies="12" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="4" numEnemies="8" />
+      <enemyInfo enemyType="3" numEnemies="4" />
+      <enemyInfo enemyType="6" numEnemies="2" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="3" numEnemies="7" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="4" numEnemies="8" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="7" numEnemies="3" />
+      <enemyInfo enemyType="6" numEnemies="3" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="1" numEnemies="6" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="4" numEnemies="6" />
+      <enemyInfo enemyType="2" numEnemies="6" />
+      <enemyInfo enemyType="3" numEnemies="6" />
+      <enemyInfo enemyType="5" numEnemies="6" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="2" numEnemies="3" />
+      <enemyInfo enemyType="3" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="5" />
+      <enemyInfo enemyType="5" numEnemies="3" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+    </wave>
+  </level>
+  <level numLevel="25" levelShape="Torus">
+    <wave numWave="0">
+      <enemyInfo enemyType="6" numEnemies="4" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="2" numEnemies="8" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="4" numEnemies="8" />
+      <enemyInfo enemyType="5" numEnemies="4" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="2" numEnemies="6" />
+      <enemyInfo enemyType="3" numEnemies="9" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="7" numEnemies="2" />
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="5" numEnemies="8" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="2" numEnemies="8" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="3" numEnemies="8" />
+      <enemyInfo enemyType="4" numEnemies="5" />
+      <enemyInfo enemyType="5" numEnemies="5" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="7" numEnemies="2" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="2" numEnemies="11" />
+      <enemyInfo enemyType="3" numEnemies="11" />
+    </wave>
+  </level>
+  <level numLevel="26" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="5" numEnemies="5" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="3" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="5" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="1" numEnemies="1" />
+      <enemyInfo enemyType="4" numEnemies="7" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="1" numEnemies="1" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="2" numEnemies="15" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="3" numEnemies="7" />
+      <enemyInfo enemyType="5" numEnemies="7" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="5" numEnemies="3" />
+      <enemyInfo enemyType="3" numEnemies="8" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="6" numEnemies="6" />
+      <enemyInfo enemyType="2" numEnemies="13" />
+    </wave>
+  </level>
+  <level numLevel="27" levelShape="RoundedCube">
+    <wave numWave="0">
+      <enemyInfo enemyType="4" numEnemies="5" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="3" numEnemies="7" />
+      <enemyInfo enemyType="2" numEnemies="5" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="5" numEnemies="11" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="7" numEnemies="2" />
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="1" numEnemies="4" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="4" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+      <enemyInfo enemyType="5" numEnemies="3" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="5" numEnemies="4" />
+      <enemyInfo enemyType="3" numEnemies="6" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="3" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="5" />
+      <enemyInfo enemyType="2" numEnemies="5" />
+      <enemyInfo enemyType="5" numEnemies="5" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="5" numEnemies="10" />
+      <enemyInfo enemyType="2" numEnemies="6" />
+      <enemyInfo enemyType="3" numEnemies="4" />
+      <enemyInfo enemyType="4" numEnemies="4" />
+    </wave>
+  </level>
+  <level numLevel="28" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="5" numEnemies="6" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="5" numEnemies="6" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="5" numEnemies="8" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="6" numEnemies="2" />
+      <enemyInfo enemyType="2" numEnemies="8" />
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="6" numEnemies="4" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="5" numEnemies="7" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="2" numEnemies="7" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="2" numEnemies="7" />
+      <enemyInfo enemyType="3" numEnemies="8" />
+      <enemyInfo enemyType="4" numEnemies="4" />
+      <enemyInfo enemyType="5" numEnemies="4" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="1" numEnemies="3" />
+      <enemyInfo enemyType="6" numEnemies="3" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="1" numEnemies="2" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="3" numEnemies="15" />
+    </wave>
+  </level>
+  <level numLevel="29" levelShape="Torus">
+    <wave numWave="0">
+      <enemyInfo enemyType="2" numEnemies="20" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="3" numEnemies="20" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="4" numEnemies="20" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="5" numEnemies="20" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="1" numEnemies="4" />
+      <enemyInfo enemyType="7" numEnemies="2" />
+      <enemyInfo enemyType="6" numEnemies="1" />
+      <enemyInfo enemyType="3" numEnemies="6" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="5" numEnemies="6" />
+      <enemyInfo enemyType="2" numEnemies="6" />
+      <enemyInfo enemyType="3" numEnemies="6" />
+      <enemyInfo enemyType="4" numEnemies="6" />
+    </wave>
+    <wave numWave="6">
+      <enemyInfo enemyType="6" numEnemies="3" />
+      <enemyInfo enemyType="7" numEnemies="1" />
+      <enemyInfo enemyType="2" numEnemies="15" />
+    </wave>
+    <wave numWave="7">
+      <enemyInfo enemyType="3" numEnemies="10" />
+      <enemyInfo enemyType="2" numEnemies="10" />
+      <enemyInfo enemyType="5" numEnemies="10" />
+    </wave>
+    <wave numWave="8">
+      <enemyInfo enemyType="8" numEnemies="1" />
+    </wave>
+  </level>
+</Root>

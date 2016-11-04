@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <level numLevel="0" levelShape="Sphere">
+    <wave numWave="0">
+      <enemyInfo enemyType="1" numEnemies="2" />
+    </wave>
+    <wave numWave="1">
+      <enemyInfo enemyType="1" numEnemies="1" />
+      <enemyInfo enemyType="2" numEnemies="3" />
+    </wave>
+    <wave numWave="2">
+      <enemyInfo enemyType="3" numEnemies="7" />
+    </wave>
+    <wave numWave="3">
+      <enemyInfo enemyType="2" numEnemies="6" />
+      <enemyInfo enemyType="4" numEnemies="8" />
+    </wave>
+    <wave numWave="4">
+      <enemyInfo enemyType="1" numEnemies="4" />
+      <enemyInfo enemyType="3" numEnemies="10" />
+    </wave>
+    <wave numWave="5">
+      <enemyInfo enemyType="3" numEnemies="8" />
+      <enemyInfo enemyType="2" numEnemies="5" />
+      <enemyInfo enemyType="1" numEnemies="5" />
+      <enemyInfo enemyType="4" numEnemies="10" />
+    </wave>
+  </level>
+</Root>

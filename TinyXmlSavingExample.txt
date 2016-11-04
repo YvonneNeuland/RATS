@@ -1,0 +1,77 @@
+void SaveState::Save()
+{
+	int health = (int)((Player*)(GameplayState::GetInstance()->GetPlayer()))->GetHealth();
+	float posx = ((Player*)(GameplayState::GetInstance()->GetPlayer()))->GetPosition().x;
+	float posy = ((Player*)(GameplayState::GetInstance()->GetPlayer()))->GetPosition().y;
+	int currLevel = GameplayState::GetInstance()->GetCurrentLevel();
+	float checkx = ((Player*)(GameplayState::GetInstance()->GetPlayer()))->GetCheckpoint().x;
+	float checky = ((Player*)(GameplayState::GetInstance()->GetPlayer()))->GetCheckpoint().y;
+
+	TiXmlDocument doc;
+
+	TiXmlDeclaration* pDel = new TiXmlDeclaration{ "1.0", "utf-8", "" };
+
+	doc.LinkEndChild(pDel);
+
+	TiXmlElement* pRoot = new TiXmlElement{ "Save1" };
+
+	doc.LinkEndChild(pRoot);
+
+	TiXmlElement* pPlayer = new TiXmlElement{ "player_info" };
+
+	pRoot->LinkEndChild(pPlayer);
+
+	pPlayer->SetAttribute("Health", health);
+	pPlayer->SetDoubleAttribute("PosX", posx);
+	pPlayer->SetDoubleAttribute("PosY", posy);
+	pPlayer->SetAttribute("CurrLevel", currLevel);
+	pPlayer->SetDoubleAttribute("CheckpointX", checkx);
+	pPlayer->SetDoubleAttribute("CheckpointY", checky);
+
+	for (unsigned int i = 0; i < InventoryState::GetInstance()->m_vSword.size(); i++)
+	{
+		TiXmlElement* pSword = new TiXmlElement{ "Sword" };
+
+		pPlayer->LinkEndChild(pSword);
+
+		pSword->SetAttribute("Element", (int)(InventoryState::GetInstance()->m_vSword[i].GetElement()));
+		pSword->SetAttribute("Tier", InventoryState::GetInstance()->m_vSword[i].GetTier());
+	}
+
+	for (unsigned int i = 0; i < InventoryState::GetInstance()->m_vArmor.size(); i++)
+	{
+		TiXmlElement* pArmor = new TiXmlElement{ "Armor" };
+
+		pPlayer->LinkEndChild(pArmor);
+
+		pArmor->SetAttribute("Element", (int)(InventoryState::GetInstance()->m_vArmor[i].GetElement()));
+		pArmor->SetAttribute("Tier", InventoryState::GetInstance()->m_vArmor[i].GetTier());
+	}
+
+	for (unsigned int i = 0; i < InventoryState::GetInstance()->m_vRing.size(); i++)
+	{
+		TiXmlElement* pRing = new TiXmlElement{ "Ring" };
+
+		pPlayer->LinkEndChild(pRing);
+
+		pRing->SetAttribute("Element", (int)(InventoryState::GetInstance()->m_vRing[i].GetElement()));
+		pRing->SetAttribute("Tier", InventoryState::GetInstance()->m_vRing[i].GetTier());
+	}
+
+	TiXmlElement* pInv = new TiXmlElement{ "Inventory" };
+	pPlayer->LinkEndChild(pInv);
+	pInv->SetAttribute("Size", InventoryState::GetInstance()->m_vRunes.size());
+
+	for (unsigned int i = 0; i < InventoryState::GetInstance()->m_vRunes.size(); i++)
+	{
+		TiXmlElement* pInv1 = new TiXmlElement{ "Rune" };
+		pInv->LinkEndChild(pInv1);
+
+		pInv1->SetAttribute("Element", (int)(InventoryState::GetInstance()->m_vRunes[i].GetElement()));
+		pInv1->SetAttribute("Tier", InventoryState::GetInstance()->m_vRunes[i].GetTier());
+	}
+
+
+	doc.SaveFile("resource/Save/Save.xml");
+
+}

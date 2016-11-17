@@ -400,6 +400,7 @@ void InputController::SetDebugKeys()
 	AddKeyEvent(m_keyPress, "DownDebug_P", KeyInfo('P', MapType::PRESS));
 	AddKeyEvent(m_keyPress, "DownDebug_E", KeyInfo('E', MapType::PRESS));
 	AddKeyEvent(m_keyPress, "DownDebug_B", KeyInfo('B', MapType::PRESS));
+	AddKeyEvent(m_keyPress, "DownDebug_O", KeyInfo('O', MapType::PRESS));
 	AddKeyEvent(m_keyPress, "DownDebug_C", KeyInfo('C', MapType::PRESS));
 	AddKeyEvent(m_keyPress, "DownDebug_1", KeyInfo('1', MapType::PRESS));
 	AddKeyEvent(m_keyPress, "DownDebug_2", KeyInfo('2', MapType::PRESS));
@@ -447,6 +448,7 @@ void InputController::ClearDebugKeys()
 	UnRegisterEvent("DownDebug_E");
 	UnRegisterEvent("DownDebug_B");
 	UnRegisterEvent("DownDebug_C");
+	UnRegisterEvent("DownDebug_O");
 	UnRegisterEvent("DownDebug_1");
 	UnRegisterEvent("DownDebug_2");
 	UnRegisterEvent("DownDebug_3");

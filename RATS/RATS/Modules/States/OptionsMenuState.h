@@ -3,7 +3,7 @@
 #include "../Object Manager/GameObject.h"
 #include "../../Wwise files/EventManager.h"
 #include "../Input/MessageSystem.h"
-
+#include "../Debug Keys/DebugKeys.h"
 
 class OptionsMenuState : public BaseState
 {
@@ -48,6 +48,9 @@ private:
 	float fMouseX, fMouseY, fMousePrevX, fMousePrevY, fCheckTimer, fGamepadTimer;
 	DWORD dwPacketNo;
 	bool bStickHeld;
+
+	//Debug Listener
+	DebugListener m_debugListener;
 
 
 	//Private Data Members

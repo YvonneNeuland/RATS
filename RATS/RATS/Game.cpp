@@ -10,6 +10,7 @@
 #include "Modules/Input/InputController.h"
 //#include "Modules/Input/ObjectRegistry.h"
 //#include "Wwise files/AudioSystemWwise.h"
+#include "Modules/Achievements/AchManager.h"
 #include "Modules/Input/ThreeSixty.h"
 #include "Modules/Audio/FFmod.h"
 // Grants Testing Includes
@@ -22,7 +23,7 @@ extern InputController* m_controller;
 extern CInputManager* m_inputMGR;
 extern XTime* m_Xtime;
 extern GameData *gameData;
-
+extern CAchManager* g_SteamAchievements;
 
 Game::Game()
 {
@@ -41,6 +42,7 @@ void Game::Initialize(HINSTANCE hInstance)
 	// Start up Steam Services
 	// - Apparenly we need to init Steam before the renderer, otherwise 
 	// - the DLL won't attach to the process properly.  
+
 	if (!SteamAPI_Init())
 	{
 
@@ -50,16 +52,27 @@ void Game::Initialize(HINSTANCE hInstance)
 		// C. App isn't running under same User context as Client, including Admin priviliges
 
 		std::cout << "SteamAPI_Init() Failed!\n";
+
 	}
-
-
-	if (SteamUser() != 0)
+	// Steam is up, let's check for the user
+	else
 	{
-		if (!SteamUser()->BLoggedOn())
+		if (SteamUser() != 0)
 		{
-			std::cout << "Steam User not logged in\n";
+			if (!SteamUser()->BLoggedOn())
+			{
+				std::cout << "Steam User not logged in\n";
+
+			}
+			// So we found the user, and we're logged in, now let's get them achievements loaded
+			else
+			{
+				g_SteamAchievements = new CAchManager(g_Achievements, 10);
+			}
 		}
 	}
+
+	
 
 
 	// Now that we tried to run steam, we can init everything else.
@@ -148,6 +161,8 @@ bool Game::Run(MSG uMsg)
 		return false;
 	g_AudioSystem->Update(dt);
 
+	if (SteamAPI_IsSteamRunning())
+		SteamAPI_RunCallbacks();
 
 	return true;
 }
@@ -172,6 +187,8 @@ void Game::Shutdown()
 	Events::CEventManager::DestroyInstance();
 	Events::MessageSystem::DestroyInstance();
 	SteamAPI_Shutdown();
+	if (g_SteamAchievements)
+		delete g_SteamAchievements;
 	
 }
 

@@ -10,6 +10,7 @@
 #include "Modules/Audio/FFmod.h"
 #include "XTime.h"
 #include "Modules/Upgrade System/GameData.h"
+#include "Modules/Achievements/AchManager.h"
 //#include <vld.h>
 #if _DEBUG
 #define _CRTDBG_MAP_ALLOC
@@ -24,7 +25,7 @@ Game gameApp;
 D3DGraphics* globalGraphicsPointer = 0;
 ThreeSixty* gamePad = 0;
 FFmod*	g_AudioSystem = 0;
-
+CAchManager* g_SteamAchievements = 0;
 InputController* m_controller = 0;
 CInputManager* m_inputMGR = 0;
 XTime* m_Xtime = 0;

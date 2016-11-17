@@ -94,6 +94,9 @@
     <Filter Include="Modules\Molecules">
       <UniqueIdentifier>{5c2e7a0a-8ce5-4704-89be-2c478d25687e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Modules\Achievements">
+      <UniqueIdentifier>{21dfe486-bba7-4922-97c5-cf9cc4c0f0eb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -378,7 +381,7 @@
     <ClInclude Include="Modules\AI\BehavLandPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Modules\Renderer\TextManip.h">
+    <ClInclude Include="Modules\Achievements\AchManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -632,7 +635,7 @@
     <ClCompile Include="Modules\AI\BehavLandPoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Modules\Renderer\TextManip.cpp">
+    <ClCompile Include="Modules\Achievements\AchManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -172,6 +172,7 @@
     <ClInclude Include="Log Files\DXLog.h" />
     <ClInclude Include="Log Files\Log.h" />
     <ClInclude Include="Log Files\Log.hpp" />
+    <ClInclude Include="Modules\Achievements\AchManager.h" />
     <ClInclude Include="Modules\AI\AICompBase.h" />
     <ClInclude Include="Modules\AI\AIManager.h" />
     <ClInclude Include="Modules\AI\BaseBehavior.h" />
@@ -266,6 +267,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Log Files\DXLog.cpp" />
     <ClCompile Include="Log Files\Log.cpp" />
+    <ClCompile Include="Modules\Achievements\AchManager.cpp" />
     <ClCompile Include="Modules\AI\AICompBase.cpp" />
     <ClCompile Include="Modules\AI\AIManager.cpp" />
     <ClCompile Include="Modules\AI\BaseBehavior.cpp" />

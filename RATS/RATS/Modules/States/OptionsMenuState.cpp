@@ -33,7 +33,10 @@ void OptionsMenuState::Enter(BitmapFontManager* bitmapFontManager, bool resetSou
 	m_unCurrentButton = 0;
 
 	if (m_controller)
+	{
 		m_controller->SetMenuKeys();
+		m_controller->SetDebugKeys();
+	}
 	using namespace Events;
 	//Setup Input
 	EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyPress", "Confirm"), this, &OptionsMenuState::OnEnter);
@@ -55,6 +58,9 @@ void OptionsMenuState::Enter(BitmapFontManager* bitmapFontManager, bool resetSou
 	//	g_AudioSystem->PostEvent(AK::EVENTS::PLAY_MX_MUSICLOOP_02);
 	//}
 
+	m_debugListener.SetFlags(DebugListenFor::ResetAchievements);
+
+
 	dwPacketNo = gamePad->GetState().state.dwPacketNumber;
 
 }
@@ -62,6 +68,8 @@ void OptionsMenuState::Enter(BitmapFontManager* bitmapFontManager, bool resetSou
 void OptionsMenuState::Exit()
 {
 	using namespace Events;
+
+	m_debugListener.ClearClients();
 
 	EventManager()->UnregisterClient("Confirm", this, &OptionsMenuState::OnEnter);
 	EventManager()->UnregisterClient("Return", this, &OptionsMenuState::OnEscape);
@@ -71,7 +79,10 @@ void OptionsMenuState::Exit()
 	EventManager()->UnregisterClient("DownArr", this, &OptionsMenuState::OnArrowDown);
 	EventManager()->UnregisterClient("MouseLClick", this, &OptionsMenuState::OnMouseClick);
 	if (m_controller)
+	{
 		m_controller->ClearMenuKeys();
+		m_controller->ClearDebugKeys();
+	}
 }
 
 void OptionsMenuState::Initialize(Renderer* renderer)

@@ -8,8 +8,11 @@
 
 #include "../Upgrade System/GameData.h"
 #include "../Audio/FFmod.h"
+#include "../Achievements/AchManager.h"
+#include "../../Dependencies/Paramesium/Include/steam_api.h"
 extern GameData* gameData;
 extern	FFmod* g_AudioSystem;
+
 
 using namespace Events;
 DebugListener::DebugListener()
@@ -245,6 +248,21 @@ void DebugListener::UnlockAllLevels(int dummy /*= 0*/)
 
 	g_AudioSystem->PlaySound("MENU_Accept");
 }
+
+
+void DebugListener::ResetSteamAchievements(int dummy /*= 0*/)
+{
+	if (!(m_flags & DebugListenFor::ResetAchievements))
+		return;
+
+	SteamUserStats()->ResetAllStats(true);
+
+	std::cout << "User Achievements Reset\n";
+
+	g_AudioSystem->PlaySound("MENU_Accept");
+
+}
+
 #pragma endregion
 
 
@@ -253,9 +271,9 @@ void DebugListener::InitDebugFuncs()
 	debugFuncs['G'] = &DebugListener::ToggleGodmode;
 	debugFuncs['F'] = &DebugListener::FillEnergy;
 	debugFuncs['N'] = &DebugListener::NextWave;
-	//debugFuncs['P'] = &DebugListener::KillPylon;    //
-	debugFuncs['E'] = &DebugListener::SpawnEnemy;   // These three need a number
-	debugFuncs['B'] = &DebugListener::SpawnPowerup; //
+	debugFuncs['O'] = &DebugListener::ResetSteamAchievements;
+	debugFuncs['E'] = &DebugListener::SpawnEnemy;   // These two 
+	debugFuncs['B'] = &DebugListener::SpawnPowerup; // need a number
 	debugFuncs['C'] = &DebugListener::MaxCredits;
 	debugFuncs['L'] = &DebugListener::UnlockAllLevels;
 }
@@ -303,6 +321,9 @@ void DebugListener::SetupClients()
 		EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyPress", "DownDebug_9"), this, &DebugListener::HandleKeyDown);
 		//EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyPress", "DownDebug_0"), this, &DebugListener::HandleKeyDown);
 	}
+
+	if (m_flags & DebugListenFor::ResetAchievements)
+		EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyPress", "DownDebug_O"), this, &DebugListener::HandleKeyDown);
 }
 
 void DebugListener::ClearClients()
@@ -346,6 +367,9 @@ void DebugListener::ClearClients()
 		EventManager()->UnregisterClient("DownDebug_9", this, &DebugListener::HandleKeyDown);
 		//EventManager()->UnregisterClient("DownDebug_0", this, &DebugListener::HandleKeyDown);
 	}
+
+	if (m_flags & DebugListenFor::ResetAchievements)
+		EventManager()->UnregisterClient("DownDebug_O", this, &DebugListener::HandleKeyDown);
 
 	m_flags = 0;
 }

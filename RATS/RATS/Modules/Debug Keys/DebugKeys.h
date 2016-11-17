@@ -10,15 +10,16 @@ class HealthComponent;
 
 enum DebugListenFor
 {
-	GodMode		= 0x01,		//0b 0000 0001
-	FillEnergy	= 0x02,		//0b 0000 0010
-	SkipWave	= 0x04,		//0b 0000 0100
-	SpawnBad	= 0x08,		//0b 0000 1000
-	SpawnGood	= 0x10,		//0b 0001 0000
-	MaxCreds	= 0x20,		//0b 0010 0000
-	AllLevels	= 0x40,		//0b 0100 0000
+	GodMode				= 0x01,		//0b 0000 0001
+	FillEnergy			= 0x02,		//0b 0000 0010
+	SkipWave			= 0x04,		//0b 0000 0100
+	SpawnBad			= 0x08,		//0b 0000 1000
+	SpawnGood			= 0x10,		//0b 0001 0000
+	MaxCreds			= 0x20,		//0b 0010 0000
+	AllLevels			= 0x40,		//0b 0100 0000
+	ResetAchievements	= 0x80,		//0B 1000 0000
 
-	PlayFlags	= 0x1F		//0b 0001 1111
+	PlayFlags			= 0x1F		//0b 0001 1111
 
 };
 
@@ -65,6 +66,7 @@ private:
 	void SpawnPowerup(int powerupType);
 	void MaxCredits(int dummy = 0);
 	void UnlockAllLevels(int dummy = 0);
+	void ResetSteamAchievements(int dummy = 0);
 
 	std::unordered_map<unsigned char, DebugKeyFunc> debugFuncs;
 

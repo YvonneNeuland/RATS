@@ -3002,8 +3002,12 @@ void D3DGraphics::HandleResize()
 
 	if (!firstRun)
 	{
-		m_chain->ResizeBuffers(0, SCREEN_WIDTH, SCREEN_HEIGHT, m_displayModeList[m_currMode].Format, DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH);
+		//OLD CODE
+		//m_chain->ResizeBuffers(0, SCREEN_WIDTH, SCREEN_HEIGHT, m_displayModeList[m_currMode].Format, DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH);
 		//m_chain->ResizeBuffers(0, SCREEN_WIDTH, SCREEN_HEIGHT, DXGI_FORMAT_UNKNOWN, DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH);
+
+		//NEW CODE
+		m_chain->ResizeBuffers(0, 0, 0, DXGI_FORMAT_UNKNOWN, DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH);
 	}
 	firstRun = false;
 
@@ -4550,30 +4554,6 @@ const Mesh* D3DGraphics::GetMesh(std::string meshName)
 		return m_assetManager.m_meshes[meshName];
 	}
 }
-
-//void D3DGraphics::IncreaseMSAALevel()
-//{
-//	MSAA_LEVEL *= 2;
-//
-//	if (MSAA_LEVEL > 8)
-//	{
-//		MSAA_LEVEL = 8;
-//	}
-//
-//	HandleResize();
-//}
-//
-//void D3DGraphics::DecreaseMSAALevel()
-//{
-//	MSAA_LEVEL = (UINT)(MSAA_LEVEL * 0.5f);
-//
-//	if (MSAA_LEVEL < 1)
-//	{
-//		MSAA_LEVEL = 1;
-//	}
-//
-//	HandleResize();
-//}
 
 XMVECTOR D3DGraphics::Unproject(XMVECTOR vec)
 {

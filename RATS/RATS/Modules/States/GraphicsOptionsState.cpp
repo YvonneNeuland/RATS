@@ -23,6 +23,7 @@ extern XTime* m_Xtime;
 GraphicsOptionsState::GraphicsOptionsState()
 {
 	dwPacketNo = 0;
+	fCheckTimer = 0.0f;
 }
 
 
@@ -55,7 +56,7 @@ void GraphicsOptionsState::Enter(BitmapFontManager* bitmapFontManager, bool rese
 	EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyPress", "UpArr"), this, &GraphicsOptionsState::OnArrowUp);
 	EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyPress", "DownArr"), this, &GraphicsOptionsState::OnArrowDown);
 	EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyPress", "LeftArr"), this, &GraphicsOptionsState::OnArrowLeft);
-	EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyDown", "RightArr"), this, &GraphicsOptionsState::OnArrowRight);
+	EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyPress", "RightArr"), this, &GraphicsOptionsState::OnArrowRight);
 	EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyPress", "MouseLClick"), this, &GraphicsOptionsState::OnMouseClick);
 	EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyDown", "MouseLDown"), this, &GraphicsOptionsState::OnMouseDown);
 	
@@ -1366,6 +1367,9 @@ bool GraphicsOptionsState::Handle360Input()
 		m_NextState = m_SelectedState;
 		g_AudioSystem->PlaySound("MENU_Accept");
 		detectedInput = true;
+
+		if (m_unCurrentButton == 5 && m_nKeyIndex == 0)
+			globalGraphicsPointer->ApplyGraphicsSettings(m_nMSAALevelIndex, m_nWindowModeIndex, m_nResolutionIndex, m_nVSyncIndex, m_fGamma);
 	}
 
 

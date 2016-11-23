@@ -56,12 +56,17 @@ void KeybindingsOptionsState::Enter(BitmapFontManager* bitmapFontManager, bool r
 
 	EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyPress", "LeftArr"), this, &KeybindingsOptionsState::OnArrowLeft);
 
-	EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyDown", "RightArr"), this, &KeybindingsOptionsState::OnArrowRight);
+	EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyPress", "RightArr"), this, &KeybindingsOptionsState::OnArrowRight);
 
 	EventManager()->RegisterClient(MessageSystem::GetInstance()->Call<const EVENTID&, const EVENTID>("GetKeyPress", "MouseLClick"), this, &KeybindingsOptionsState::OnMouseClick);
 
 
 	dwPacketNo = gamePad->GetState().state.dwPacketNumber;
+
+
+	if (gameData->m_bUsingGamepad)
+		SetInputMode(1);
+
 }
 
 void KeybindingsOptionsState::Exit()

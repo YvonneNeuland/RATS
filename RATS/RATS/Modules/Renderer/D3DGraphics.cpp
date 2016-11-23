@@ -78,13 +78,17 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wparam, LPARAM lparam);
 D3DGraphics::D3DGraphics()
 {
 
-#ifdef _DEBUG
+//#ifdef _DEBUG
+//
+//	SCREEN_WIDTH = 1024;
+//	SCREEN_HEIGHT = 768;
+//	FULL_SCREEN = false;
+//
+//#endif
 
 	SCREEN_WIDTH = 1024;
 	SCREEN_HEIGHT = 768;
 	FULL_SCREEN = false;
-
-#endif
 
 	/////////////////////
 	//UNIVERSAL OBJECTS//
@@ -2982,6 +2986,11 @@ void D3DGraphics::Render(ID3D11RenderTargetView* rtv, ID3D11DepthStencilView* de
 
 void D3DGraphics::HandleResize()
 {
+
+	if (m_chain == nullptr)
+	{
+		return;
+	}
 
 	std::cout << "RESIZE FUNCTION REACHED\n";
 

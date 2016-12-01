@@ -375,6 +375,71 @@ void D3DGraphics::ApplyGraphicsSettings(int msaaIndex, int screenIndex, int reso
 
 	MapGamma(gamma);
 
+	//TWICE FOR GOOD MEASURE
+
+	//First apply msaa settings
+	if (msaaIndex < 0)
+	{
+		msaaIndex = 0;
+	}
+	else if (msaaIndex > 3)
+	{
+		msaaIndex = 3;
+	}
+
+	MSAA_LEVEL = m_msaaLevels[msaaIndex].m_msaaValue;
+	HandleResize();
+
+	//Next apply fullscreen settings
+	if (screenIndex < 0)
+	{
+		screenIndex = 0;
+	}
+	else if (screenIndex > 2)
+	{
+		screenIndex = 2;
+	}
+
+	if (m_bordersActive != m_screenStates[screenIndex].bordersActive && m_screenStates[screenIndex].fullScreen == false && FULL_SCREEN == false)
+	{
+		m_bordersActive = m_screenStates[screenIndex].bordersActive;
+
+		if (m_bordersActive)
+		{
+			//WINDOWED
+			SetWindowLong(m_hWnd, GWL_STYLE, WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX);
+			SetWindowPos(m_hWnd, m_hWnd, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
+			ShowWindow(m_hWnd, SW_SHOWNORMAL);
+
+		}
+		else
+		{
+			//BORDERLESS
+			SetWindowLong(m_hWnd, GWL_STYLE, WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_POPUP);
+			ShowWindow(m_hWnd, SW_SHOWMAXIMIZED);
+
+		}
+	}
+	else
+	{
+		m_bordersActive = m_screenStates[screenIndex].bordersActive;
+
+	}
+
+	SetFullscreen(m_screenStates[screenIndex].fullScreen);
+
+	//Next resolution settings
+
+	SetResolution(resolutionIndex);
+
+	//Next vsync settings
+
+	VSYNC_ENABLED = m_vsyncStates[vsyncIndex].vsync;
+
+	//gamma
+
+	MapGamma(gamma);
+
 }
 
 

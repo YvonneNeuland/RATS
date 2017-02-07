@@ -336,6 +336,16 @@ void GamePlayState::Initialize( Renderer* renderer )
 
 void GamePlayState::Update( float dt )
 {
+
+	//m_safetyTimer += dt;
+
+	//if (m_safetyTimer >= 10)
+	//{
+	//	m_safetyTimer = 0;
+	//	globalGraphicsPointer->FlushOldMemory();
+	//	
+	//}
+
 	static float gunIconTimer = 0;
 
 	gunIconTimer += dt;
@@ -3250,12 +3260,19 @@ void GamePlayState::UpdateLevelTimer( float dt )
 		number += std::to_string( seconds );
 	}
 
-	RenderComp* levelTimer = (RenderComp*)m_pLevelTimerNumber->GetComponent( "RenderComp" );
-	if ( levelTimer )
+	if (number != m_oldTimerNumber)
 	{
-		levelTimer->SetID( number );
-		levelTimer->m_renderInfo = nullptr;
+		m_oldTimerNumber = number;
+
+		RenderComp* levelTimer = (RenderComp*)m_pLevelTimerNumber->GetComponent("RenderComp");
+		if (levelTimer)
+		{
+			levelTimer->SetID(number);
+			levelTimer->m_renderInfo = nullptr;
+		}
 	}
+
+
 }
 
 float GamePlayState::SetPylonPosSphere()

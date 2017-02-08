@@ -149,6 +149,11 @@ private:
 	bool m_bGameLost						= false;
 
 
+	string m_oldTimerNumber = "  ";
+
+	float m_safetyTimer = 0;
+
+
 	float m_empTimer = 0;
 
 

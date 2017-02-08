@@ -20,6 +20,8 @@ extern GameData *gameData;
 extern ThreeSixty* gamePad;
 extern CAchManager* g_SteamAchievements;
 
+
+
 CollisionManager::CollisionManager()
 {
 }
@@ -3665,24 +3667,26 @@ void CollisionManager::HandleAchHazards()
 	{
 		prevNumKills = g_SteamAchievements->m_pStats[EStats::STAT_ENV_HAZ_KILLS].m_iValue;
 
-		if (prevNumKills == 50)
+		if (prevNumKills == ENV_HAZ_KILLS_TOTAL)
 			return;
 
 		g_SteamAchievements->m_pStats[EStats::STAT_ENV_HAZ_KILLS].m_iValue++;
 		SteamUserStats()->SetStat("STAT_ENV_HAZ_KILLS", g_SteamAchievements->m_pStats[EStats::STAT_ENV_HAZ_KILLS].m_iValue);
 
 		//INDICATION PROGRESS CHECKS
-		if (prevNumKills == 9)
-			SteamUserStats()->IndicateAchievementProgress("ACH_USE_DEM_HAZARDS", 10, 50);
-
-		if (prevNumKills == 19)
-			SteamUserStats()->IndicateAchievementProgress("ACH_USE_DEM_HAZARDS", 20, 50);
 
 		if (prevNumKills == 29)
-			SteamUserStats()->IndicateAchievementProgress("ACH_USE_DEM_HAZARDS", 30, 50);
+			SteamUserStats()->IndicateAchievementProgress("ACH_USE_DEM_HAZARDS", 30, ENV_HAZ_KILLS_TOTAL);
+		
+		if (prevNumKills == 59)
+			SteamUserStats()->IndicateAchievementProgress("ACH_USE_DEM_HAZARDS", 60, ENV_HAZ_KILLS_TOTAL);
 
-		if (prevNumKills == 39)
-			SteamUserStats()->IndicateAchievementProgress("ACH_USE_DEM_HAZARDS", 40, 50);
+		if (prevNumKills == 89)
+			SteamUserStats()->IndicateAchievementProgress("ACH_USE_DEM_HAZARDS", 90, ENV_HAZ_KILLS_TOTAL);
+
+		if (prevNumKills == 119)
+			SteamUserStats()->IndicateAchievementProgress("ACH_USE_DEM_HAZARDS", 120, ENV_HAZ_KILLS_TOTAL);
+
 	}
 
 }
@@ -3695,24 +3699,24 @@ void CollisionManager::HandleAchSpread()
 	{
 		prevNumKills = g_SteamAchievements->m_pStats[EStats::STAT_BOMBER_SPREAD_KILLS].m_iValue;
 
-		if (prevNumKills == 50)
+		if (prevNumKills == BOMBER_KILLS_TOTAL)
 			return;
 
 		g_SteamAchievements->m_pStats[EStats::STAT_BOMBER_SPREAD_KILLS].m_iValue++;
 		SteamUserStats()->SetStat("STAT_BOMBER_SPREAD_KILLS", g_SteamAchievements->m_pStats[EStats::STAT_BOMBER_SPREAD_KILLS].m_iValue);
 
 		//INDICATION PROGRESS CHECKS
-		if (prevNumKills == 9)
-			SteamUserStats()->IndicateAchievementProgress("ACH_SPREADSHOT_BOMBER", 10, 50);
+		if (prevNumKills == 49)
+			SteamUserStats()->IndicateAchievementProgress("ACH_SPREADSHOT_BOMBER", 50, BOMBER_KILLS_TOTAL);
 
-		if (prevNumKills == 19)
-			SteamUserStats()->IndicateAchievementProgress("ACH_SPREADSHOT_BOMBER", 20, 50);
+		if (prevNumKills == 99)
+			SteamUserStats()->IndicateAchievementProgress("ACH_SPREADSHOT_BOMBER", 100, BOMBER_KILLS_TOTAL);
 
-		if (prevNumKills == 29)
-			SteamUserStats()->IndicateAchievementProgress("ACH_SPREADSHOT_BOMBER", 30, 50);
+		if (prevNumKills == 149)
+			SteamUserStats()->IndicateAchievementProgress("ACH_SPREADSHOT_BOMBER", 150, BOMBER_KILLS_TOTAL);
 
-		if (prevNumKills == 39)
-			SteamUserStats()->IndicateAchievementProgress("ACH_SPREADSHOT_BOMBER", 40, 50);
+		if (prevNumKills == 199)
+			SteamUserStats()->IndicateAchievementProgress("ACH_SPREADSHOT_BOMBER", 200, BOMBER_KILLS_TOTAL);
 	}
 }
 
@@ -3724,24 +3728,22 @@ void CollisionManager::HandleAchWhip()
 	{
 		prevNumKills = g_SteamAchievements->m_pStats[EStats::STAT_MINE_WHIP_KILLS].m_iValue;
 
-		if (prevNumKills == 75)
+		if (prevNumKills == MINE_KILLS_TOTAL)
 			return;
 
 		g_SteamAchievements->m_pStats[EStats::STAT_MINE_WHIP_KILLS].m_iValue++;
 		SteamUserStats()->SetStat("STAT_MINE_WHIP_KILLS", g_SteamAchievements->m_pStats[EStats::STAT_MINE_WHIP_KILLS].m_iValue);
 
 		//INDICATION PROGRESS CHECKS
-		if (prevNumKills == 14)
-			SteamUserStats()->IndicateAchievementProgress("ACH_WHIP_75", 15, 75);
+		if (prevNumKills == 49)
+			SteamUserStats()->IndicateAchievementProgress("ACH_WHIP_75", 50, MINE_KILLS_TOTAL);
 
-		if (prevNumKills == 29)
-			SteamUserStats()->IndicateAchievementProgress("ACH_WHIP_75", 30, 75);
+		if (prevNumKills == 99)
+			SteamUserStats()->IndicateAchievementProgress("ACH_WHIP_75", 100, MINE_KILLS_TOTAL);
 
-		if (prevNumKills == 44)
-			SteamUserStats()->IndicateAchievementProgress("ACH_WHIP_75", 45, 75);
+		if (prevNumKills == 149)
+			SteamUserStats()->IndicateAchievementProgress("ACH_WHIP_75", 150, MINE_KILLS_TOTAL);
 
-		if (prevNumKills == 59)
-			SteamUserStats()->IndicateAchievementProgress("ACH_WHIP_75", 60, 75);
 	}
 }
 
@@ -3753,21 +3755,24 @@ void CollisionManager::HandleAchMissile()
 	{
 		prevNumKills = g_SteamAchievements->m_pStats[EStats::STAT_DODGER_MISSILE_KILLS].m_iValue;
 
-		if (prevNumKills == 40)
+		if (prevNumKills == DODGER_KILLS_TOTAL)
 			return;
 
 		g_SteamAchievements->m_pStats[EStats::STAT_DODGER_MISSILE_KILLS].m_iValue++;
 		SteamUserStats()->SetStat("STAT_DODGER_MISSILE_KILLS", g_SteamAchievements->m_pStats[EStats::STAT_DODGER_MISSILE_KILLS].m_iValue);
 
 		//INDICATION PROGRESS CHECKS
-		if (prevNumKills == 9)
-			SteamUserStats()->IndicateAchievementProgress("ACH_HOMINGMISSILE_40", 10, 50);
-
-		if (prevNumKills == 19)
-			SteamUserStats()->IndicateAchievementProgress("ACH_HOMINGMISSILE_40", 20, 50);
-
 		if (prevNumKills == 29)
-			SteamUserStats()->IndicateAchievementProgress("ACH_HOMINGMISSILE_40", 30, 50);
+			SteamUserStats()->IndicateAchievementProgress("ACH_HOMINGMISSILE_40", 30, DODGER_KILLS_TOTAL);
+
+		if (prevNumKills == 59)
+			SteamUserStats()->IndicateAchievementProgress("ACH_HOMINGMISSILE_40", 60, DODGER_KILLS_TOTAL);
+
+		if (prevNumKills == 89)
+			SteamUserStats()->IndicateAchievementProgress("ACH_HOMINGMISSILE_40", 90, DODGER_KILLS_TOTAL);
+
+		if (prevNumKills == 119)
+			SteamUserStats()->IndicateAchievementProgress("ACH_HOMINGMISSILE_40", 120, DODGER_KILLS_TOTAL);
 
 	}
 }

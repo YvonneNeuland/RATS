@@ -50,7 +50,7 @@ enum EAchievements
 	ACH_USE_DEM_HAZARDS,
 	ACH_SPREADSHOT_BOMBER,
 	ACH_HOMINGMISSILE_40,
-	ACH_WHIP_75
+	ACH_WHIP_100
 };
 
 enum EStats
@@ -74,7 +74,7 @@ static Achievement_t g_Achievements[] =
 	_ACH_ID(ACH_USE_DEM_HAZARDS, "Master of the Elements"),							// done ?
 	_ACH_ID(ACH_SPREADSHOT_BOMBER, "Spray N' Pray"),								// done	?
 	_ACH_ID(ACH_HOMINGMISSILE_40, "Dodge this!"),									// done	?
-	_ACH_ID(ACH_WHIP_75, "Whip it good")											// done	?
+	_ACH_ID(ACH_WHIP_100, "Whip it good")											// done	?
 };
 
 static Stat_t g_Stats[] =
@@ -87,6 +87,11 @@ static Stat_t g_Stats[] =
 	_STAT_ID(7, STAT_INT, "STAT_MINE_WHIP_KILLS")
 
 };
+
+#define ENV_HAZ_KILLS_TOTAL 150
+#define BOMBER_KILLS_TOTAL 250
+#define DODGER_KILLS_TOTAL 150
+#define MINE_KILLS_TOTAL 200
 
 class CAchManager
 {

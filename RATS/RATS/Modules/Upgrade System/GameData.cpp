@@ -5,8 +5,10 @@
 #include "../Object Manager/GameObject.h"
 #include "../TinyXml/tinyxml.h"
 #include "../TinyXml/tinystr.h"
-
+#include "../Achievements/AchManager.h"
 #include <thread>
+
+extern CAchManager* g_SteamAchievements;
 
 GameData::GameData()
 {
@@ -409,4 +411,63 @@ void GameData::SaveThread()
 	}
 
 	doc.SaveFile("Assets/XML/Slot1Save.xml");
+}
+
+// ACHIEVEMENT CHECK
+void GameData::CheckForAllStars()
+{
+	int prevNumStars = 0;
+	int newNumStars = 0;
+
+	if (g_SteamAchievements->m_pAchievements[EAchievements::ACH_ACE_ALL_LEVELS].m_bAchieved == false)
+	{
+		// get old stat value
+		prevNumStars = g_SteamAchievements->m_pStats[EStats::STAT_STARS_UNLOCKED].m_iValue;
+
+
+		// calculate number of stars now that we beat a level
+		for (int i = 0; i < this->m_num_levels; i++)
+		{
+			if (m_Level_Information[i].star_1 == true)
+				newNumStars++;
+
+			if (m_Level_Information[i].star_2 == true)
+				newNumStars++;
+
+			if (m_Level_Information[i].star_3 == true)
+				newNumStars++;
+		}
+
+		// compare values
+
+		if (prevNumStars >= newNumStars)
+		{
+			// if the old stat value is equal or higher than the new value, either we didn't get any stars
+			// or we deleted our profile and haven't gotten as far yet
+			return;
+		}
+
+		g_SteamAchievements->m_pStats[EStats::STAT_STARS_UNLOCKED].m_iValue = newNumStars;
+		SteamUserStats()->SetStat("STAT_STARS_UNLOCKED", newNumStars);
+		SteamUserStats()->StoreStats();
+
+		// ACHIEVEMENT INDICATE PROGRESS CHECKS
+
+		if (prevNumStars < 15 && newNumStars >= 15)
+			SteamUserStats()->IndicateAchievementProgress("ACH_ACE_ALL_LEVELS", newNumStars, m_num_levels * 3);
+
+		if (prevNumStars < 30 && newNumStars >= 30)
+			SteamUserStats()->IndicateAchievementProgress("ACH_ACE_ALL_LEVELS", newNumStars, m_num_levels * 3);
+
+		if (prevNumStars < 45 && newNumStars >= 45)
+			SteamUserStats()->IndicateAchievementProgress("ACH_ACE_ALL_LEVELS", newNumStars, m_num_levels * 3);
+
+		if (prevNumStars < 60 && newNumStars >= 60)
+			SteamUserStats()->IndicateAchievementProgress("ACH_ACE_ALL_LEVELS", newNumStars, m_num_levels * 3);
+
+		if (prevNumStars < 75 && newNumStars >= 75)
+			SteamUserStats()->IndicateAchievementProgress("ACH_ACE_ALL_LEVELS", newNumStars, m_num_levels * 3);
+		
+
+	}
 }

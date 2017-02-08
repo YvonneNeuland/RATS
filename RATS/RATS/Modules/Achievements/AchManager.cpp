@@ -15,7 +15,7 @@ CAchManager::~CAchManager()
 // What it does - The constructor initializes a number of members along with grabbing the AppID we are currently running as.
 //                In addition it hooks up the call back methods to handle asynchronous calls made to Steam.
 //                Finally it makes an initial call to RequestStats() to get stats and achievements for the current user.
-CAchManager::CAchManager(Achievement_t *Achievements, int NumAchievements) :
+CAchManager::CAchManager(Achievement_t *Achievements, int NumAchievements, Stat_t *Stats, int NumStats) :
 m_iAppID(0),
 m_bInitialized(false),
 m_CallbackUserStatsReceived(this, &CAchManager::OnUserStatsReceived),
@@ -25,6 +25,8 @@ m_CallbackAchievementStored(this, &CAchManager::OnAchievementStored)
 	m_iAppID = SteamUtils()->GetAppID();
 	m_pAchievements = Achievements;
 	m_iNumAchievements = NumAchievements;
+	m_pStats = Stats;
+	m_iNumStats = NumStats;
 	RequestStats();
 }
 
@@ -53,6 +55,46 @@ bool CAchManager::RequestStats()
 	}
 	// Request user stats.
 	return SteamUserStats()->RequestCurrentStats();
+}
+
+
+
+//Returns - a bool representing if the call succeeded or not.If the call failed then most likely Steam is not initialized.
+//          Make sure you have a steam client open when you try to make this call and that SteamAPI_Init() has been called before it.
+//What it does - This method basically wraps a call to SteamUserStats()->StoreStats() that is an asynchronous call to steam storing the stats of the current user.
+//               This call needs to be made anytime you want to update the stats of the user.
+bool CAchManager::StoreStats()
+{
+	if (m_bInitialized)
+	{
+		// load stats
+		for (int iStat = 0; iStat < m_iNumStats; ++iStat)
+		{
+			Stat_t &stat = m_pStats[iStat];
+			switch (stat.m_eStatType)
+			{
+			case STAT_INT:
+				SteamUserStats()->SetStat(stat.m_pchStatName, stat.m_iValue);
+				break;
+
+			case STAT_FLOAT:
+				SteamUserStats()->SetStat(stat.m_pchStatName, stat.m_flValue);
+				break;
+
+			case STAT_AVGRATE:
+				SteamUserStats()->UpdateAvgRateStat(stat.m_pchStatName, stat.m_flAvgNumerator, stat.m_flAvgDenominator);
+				// The averaged result is calculated for us
+				SteamUserStats()->GetStat(stat.m_pchStatName, &stat.m_flValue);
+				break;
+
+			default:
+				break;
+			}
+		}
+		return SteamUserStats()->StoreStats();
+	}
+
+	return false;
 }
 
 
@@ -105,6 +147,25 @@ void CAchManager::OnUserStatsReceived(UserStatsReceived_t *pCallback)
 				_snprintf(ach.m_rgchName, sizeof(ach.m_rgchName), "%s", SteamUserStats()->GetAchievementDisplayAttribute(ach.m_pchAchievementID, "name"));
 				_snprintf(ach.m_rgchDescription, sizeof(ach.m_rgchDescription), "%s", SteamUserStats()->GetAchievementDisplayAttribute(ach.m_pchAchievementID, "desc"));
 			}
+			// load stats
+			for (int iStat = 0; iStat < m_iNumStats; ++iStat)
+			{
+				Stat_t &stat = m_pStats[iStat];
+				switch (stat.m_eStatType)
+				{
+				case STAT_INT:
+					SteamUserStats()->GetStat(stat.m_pchStatName, &stat.m_iValue);
+					break;
+
+				case STAT_FLOAT:
+				case STAT_AVGRATE:
+					SteamUserStats()->GetStat(stat.m_pchStatName, &stat.m_flValue);
+					break;
+
+				default:
+					break;
+				}
+			}
 		}
 		else
 		{
@@ -154,4 +215,9 @@ void CAchManager::OnAchievementStored(UserAchievementStored_t *pCallback)
 	{
 		std::cout << "Stored Achievement for Steam\n";
 	}
+}
+
+void CAchManager::ResetAllValues()
+{
+
 }

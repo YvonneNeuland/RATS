@@ -11,10 +11,14 @@
 #include "../Upgrade System/GameData.h"
 #include "../Molecules/MoleculeManager.h"
 #include "../Input/ThreeSixty.h"
+#include "../Achievements/AchManager.h"
+
+
 extern D3DGraphics* globalGraphicsPointer;
 extern 	FFmod*		g_AudioSystem;
 extern GameData *gameData;
 extern ThreeSixty* gamePad;
+extern CAchManager* g_SteamAchievements;
 
 CollisionManager::CollisionManager()
 {
@@ -2548,6 +2552,11 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 				_lhs.m_pOwner->Ignite();
+
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 		case Env_Tornado:
@@ -2555,6 +2564,11 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 				_lhs.m_pOwner->SpinOut();
+
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 
@@ -2703,6 +2717,11 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 				_lhs.m_pOwner->Ignite();
+
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 		case Env_Tornado:
@@ -2711,6 +2730,11 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 				_lhs.m_pOwner->SpinOut();
+
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 
@@ -2807,6 +2831,11 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 				_lhs.m_pOwner->Ignite();
+
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 		case Env_Tornado:
@@ -2814,6 +2843,11 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 				_lhs.m_pOwner->SpinOut();
+
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 		
@@ -2893,6 +2927,11 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 				_lhs.m_pOwner->Ignite();
+
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 		case Env_Tornado:
@@ -2900,6 +2939,11 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 				_lhs.m_pOwner->SpinOut();
+
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 
@@ -2979,6 +3023,11 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 				_lhs.m_pOwner->Ignite();
+
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 
@@ -2987,6 +3036,11 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 				_lhs.m_pOwner->SpinOut();
+
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 
@@ -3026,7 +3080,6 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			break;
 
 		case eOBJECT_TYPE::Bullet_Simple:
-		case eOBJECT_TYPE::Bullet_Missile:
 		case eOBJECT_TYPE::Bullet_Spread:
 		case eOBJECT_TYPE::Bullet_Whip:
 			//_lhs.m_pOwner->TakeDamage(gameData->GetDamage());
@@ -3035,6 +3088,18 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 
+			}
+			break;
+		case eOBJECT_TYPE::Bullet_Missile:
+			_rhs.m_pOwner->SetDead(true);
+			if (_lhs.m_pOwner->TakeDamage(gameData->GetDamage()))
+			{
+				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
+
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchMissile();
+				}
 			}
 			break;
 
@@ -3065,6 +3130,11 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 				_lhs.m_pOwner->SpinOut();
+
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 		case Env_Prominence:
@@ -3072,6 +3142,11 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 				_lhs.m_pOwner->Ignite();
+
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 		case Env_Prominence_Bullet:
@@ -3079,6 +3154,10 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 
@@ -3118,7 +3197,7 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 
 		case eOBJECT_TYPE::Bullet_Simple:
 		case eOBJECT_TYPE::Bullet_Missile:
-		case eOBJECT_TYPE::Bullet_Spread:
+
 		case eOBJECT_TYPE::Bullet_Whip:
 			//_lhs.m_pOwner->TakeDamage(gameData->GetDamage());
 			_rhs.m_pOwner->SetDead(true);
@@ -3126,6 +3205,18 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
 
+			}
+			break;
+		case eOBJECT_TYPE::Bullet_Spread:
+			_rhs.m_pOwner->SetDead(true);
+			if (_lhs.m_pOwner->TakeDamage(gameData->GetDamage()))
+			{
+				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
+
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchSpread();
+				}
 			}
 			break;
 
@@ -3179,13 +3270,23 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 		case eOBJECT_TYPE::Bullet_Simple:
 		case eOBJECT_TYPE::Bullet_Missile:
 		case eOBJECT_TYPE::Bullet_Spread:
+			_rhs.m_pOwner->SetDead(true);
+			if (_lhs.m_pOwner->TakeDamage(gameData->GetDamage()))
+			{
+				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
+
+			}
+			break;
 		case eOBJECT_TYPE::Bullet_Whip:
 			//_lhs.m_pOwner->TakeDamage(5);
 			_rhs.m_pOwner->SetDead(true);
 			if (_lhs.m_pOwner->TakeDamage(gameData->GetDamage()))
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
-
+				if (_lhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchWhip();
+				}
 			}
 			break;
 
@@ -3226,6 +3327,11 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			if (_rhs.m_pOwner->TakeDamage(5))
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
+
+				if (_rhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 		case eOBJECT_TYPE::Orb_Blue:
@@ -3272,11 +3378,20 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			}
 			break;
 		case eOBJECT_TYPE::Enemy_Koi:
-		case eOBJECT_TYPE::EvilBullet_HeatSeek:
 		case eOBJECT_TYPE::Enemy_Bomber:
 		{
 			_rhs.m_pOwner->SetDead();
 			g_AudioSystem->PlaySound("RATS_EnemyDeath", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
+
+			HandleAchHazards();
+			
+		}
+			break;
+		case eOBJECT_TYPE::EvilBullet_HeatSeek:
+		{
+			_rhs.m_pOwner->SetDead();
+			g_AudioSystem->PlaySound("RATS_EnemyDeath", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
+
 		}
 			break;
 		case eOBJECT_TYPE::Enemy_Merc:
@@ -3288,6 +3403,11 @@ void CollisionManager::HandleReaction(ColliderComp& _lhs, ColliderComp& _rhs)
 			if (_rhs.m_pOwner->TakeDamage(10))
 			{
 				g_AudioSystem->PlaySound("RATS_EnemyHit", _lhs.m_pOwner);// , *_lhs.m_pOwner->GetTransform().GetPosition());
+
+				if (_rhs.m_pOwner->GetComponent<HealthComponent>()->GetHealth() <= 0)
+				{
+					HandleAchHazards();
+				}
 			}
 			break;
 		case eOBJECT_TYPE::Orb_Blue:
@@ -3534,5 +3654,121 @@ void CollisionManager::PushBackStatic(ColliderComp& _static, ColliderComp& _dyna
 	impulseHelper += DirectX::XMLoadFloat3(&_dynamic.GetOwner()->GetImpulse());
 	DirectX::XMStoreFloat3(&outVec, impulseHelper);
 	_dynamic.GetOwner()->SetImpulse(outVec);
+}
+
+// ACHIEVEMENT CHECK
+void CollisionManager::HandleAchHazards()
+{
+	int prevNumKills;
+
+	if (g_SteamAchievements)
+	{
+		prevNumKills = g_SteamAchievements->m_pStats[EStats::STAT_ENV_HAZ_KILLS].m_iValue;
+
+		if (prevNumKills == 50)
+			return;
+
+		g_SteamAchievements->m_pStats[EStats::STAT_ENV_HAZ_KILLS].m_iValue++;
+		SteamUserStats()->SetStat("STAT_ENV_HAZ_KILLS", g_SteamAchievements->m_pStats[EStats::STAT_ENV_HAZ_KILLS].m_iValue);
+
+		//INDICATION PROGRESS CHECKS
+		if (prevNumKills == 9)
+			SteamUserStats()->IndicateAchievementProgress("ACH_USE_DEM_HAZARDS", 10, 50);
+
+		if (prevNumKills == 19)
+			SteamUserStats()->IndicateAchievementProgress("ACH_USE_DEM_HAZARDS", 20, 50);
+
+		if (prevNumKills == 29)
+			SteamUserStats()->IndicateAchievementProgress("ACH_USE_DEM_HAZARDS", 30, 50);
+
+		if (prevNumKills == 39)
+			SteamUserStats()->IndicateAchievementProgress("ACH_USE_DEM_HAZARDS", 40, 50);
+	}
+
+}
+
+void CollisionManager::HandleAchSpread()
+{
+	int prevNumKills;
+
+	if (g_SteamAchievements)
+	{
+		prevNumKills = g_SteamAchievements->m_pStats[EStats::STAT_BOMBER_SPREAD_KILLS].m_iValue;
+
+		if (prevNumKills == 50)
+			return;
+
+		g_SteamAchievements->m_pStats[EStats::STAT_BOMBER_SPREAD_KILLS].m_iValue++;
+		SteamUserStats()->SetStat("STAT_BOMBER_SPREAD_KILLS", g_SteamAchievements->m_pStats[EStats::STAT_BOMBER_SPREAD_KILLS].m_iValue);
+
+		//INDICATION PROGRESS CHECKS
+		if (prevNumKills == 9)
+			SteamUserStats()->IndicateAchievementProgress("ACH_SPREADSHOT_BOMBER", 10, 50);
+
+		if (prevNumKills == 19)
+			SteamUserStats()->IndicateAchievementProgress("ACH_SPREADSHOT_BOMBER", 20, 50);
+
+		if (prevNumKills == 29)
+			SteamUserStats()->IndicateAchievementProgress("ACH_SPREADSHOT_BOMBER", 30, 50);
+
+		if (prevNumKills == 39)
+			SteamUserStats()->IndicateAchievementProgress("ACH_SPREADSHOT_BOMBER", 40, 50);
+	}
+}
+
+void CollisionManager::HandleAchWhip()
+{
+	int prevNumKills;
+
+	if (g_SteamAchievements)
+	{
+		prevNumKills = g_SteamAchievements->m_pStats[EStats::STAT_MINE_WHIP_KILLS].m_iValue;
+
+		if (prevNumKills == 75)
+			return;
+
+		g_SteamAchievements->m_pStats[EStats::STAT_MINE_WHIP_KILLS].m_iValue++;
+		SteamUserStats()->SetStat("STAT_MINE_WHIP_KILLS", g_SteamAchievements->m_pStats[EStats::STAT_MINE_WHIP_KILLS].m_iValue);
+
+		//INDICATION PROGRESS CHECKS
+		if (prevNumKills == 14)
+			SteamUserStats()->IndicateAchievementProgress("ACH_WHIP_75", 15, 75);
+
+		if (prevNumKills == 29)
+			SteamUserStats()->IndicateAchievementProgress("ACH_WHIP_75", 30, 75);
+
+		if (prevNumKills == 44)
+			SteamUserStats()->IndicateAchievementProgress("ACH_WHIP_75", 45, 75);
+
+		if (prevNumKills == 59)
+			SteamUserStats()->IndicateAchievementProgress("ACH_WHIP_75", 60, 75);
+	}
+}
+
+void CollisionManager::HandleAchMissile()
+{
+	int prevNumKills;
+
+	if (g_SteamAchievements)
+	{
+		prevNumKills = g_SteamAchievements->m_pStats[EStats::STAT_DODGER_MISSILE_KILLS].m_iValue;
+
+		if (prevNumKills == 40)
+			return;
+
+		g_SteamAchievements->m_pStats[EStats::STAT_DODGER_MISSILE_KILLS].m_iValue++;
+		SteamUserStats()->SetStat("STAT_DODGER_MISSILE_KILLS", g_SteamAchievements->m_pStats[EStats::STAT_DODGER_MISSILE_KILLS].m_iValue);
+
+		//INDICATION PROGRESS CHECKS
+		if (prevNumKills == 9)
+			SteamUserStats()->IndicateAchievementProgress("ACH_HOMINGMISSILE_40", 10, 50);
+
+		if (prevNumKills == 19)
+			SteamUserStats()->IndicateAchievementProgress("ACH_HOMINGMISSILE_40", 20, 50);
+
+		if (prevNumKills == 29)
+			SteamUserStats()->IndicateAchievementProgress("ACH_HOMINGMISSILE_40", 30, 50);
+
+	}
 }
 

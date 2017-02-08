@@ -12,6 +12,7 @@
 #include "../../Dependencies/Paramesium/Include/steam_api.h"
 extern GameData* gameData;
 extern	FFmod* g_AudioSystem;
+extern CAchManager* g_SteamAchievements;
 
 
 using namespace Events;
@@ -256,6 +257,8 @@ void DebugListener::ResetSteamAchievements(int dummy /*= 0*/)
 		return;
 
 	SteamUserStats()->ResetAllStats(true);
+
+	g_SteamAchievements->RequestStats();
 
 	std::cout << "User Achievements Reset\n";
 

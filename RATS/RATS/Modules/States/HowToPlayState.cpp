@@ -114,6 +114,13 @@ void HowToPlayState::Update(float dt)
 			/*globalGraphicsPointer->SetCrosshairShowing(false);*/
 		}
 	}
+
+	if (_finite(fGamepadTimer) == 0)
+	{
+		std::cout << "GAMEPAD TIMER IS GARBAGE VAL!!\n";
+		fGamepadTimer = 0;
+	}
+
 	SetSelectButton();
 	
 }
@@ -379,7 +386,9 @@ bool HowToPlayState::Handle360Input()
 	bool detectedInput = false;
 
 	if (tmpPad.stickDir[0][stickDirections::sRight] == buttonStatus::bPress ||
-		tmpPad.stickDir[0][stickDirections::sRight] == buttonStatus::bHeld)
+		tmpPad.stickDir[0][stickDirections::sRight] == buttonStatus::bHeld ||
+		tmpPad.buttons[buttonList::DPAD_RIGHT] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_RIGHT] == buttonStatus::bHeld)
 	{
 		SetCurrentButton(m_unCurrentButton + 1);
 		g_AudioSystem->PlaySound("MENU_Hover");
@@ -387,7 +396,9 @@ bool HowToPlayState::Handle360Input()
 	}
 
 	if (tmpPad.stickDir[0][stickDirections::sLeft] == buttonStatus::bPress ||
-		tmpPad.stickDir[0][stickDirections::sLeft] == buttonStatus::bHeld)
+		tmpPad.stickDir[0][stickDirections::sLeft] == buttonStatus::bHeld ||
+		tmpPad.buttons[buttonList::DPAD_LEFT] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_LEFT] == buttonStatus::bHeld)
 	{
 		SetCurrentButton(m_unCurrentButton - 1);
 		g_AudioSystem->PlaySound("MENU_Hover");
@@ -420,7 +431,17 @@ bool HowToPlayState::Handle360Input()
 
 	}
 
+	if (tmpPad.buttons[buttonList::B] == buttonStatus::bPress)
+	{
+		if (m_unCurrentButton != 2)
+		{
+			m_unCurrentButton = 2;
+			g_AudioSystem->PlaySound("MENU_Back");
 
+		}
+
+		detectedInput = true;
+	}
 
 	return detectedInput;
 }

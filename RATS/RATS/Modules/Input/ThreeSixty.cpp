@@ -291,8 +291,12 @@ void ThreeSixty::HandleButtonTiming(int _whichOne /*= 0*/)
 		}
 		else if (m_Controllers[_whichOne].buttons[DPAD_UP] == bPress)
 		{
+			m_Controllers[_whichOne].buttons[DPAD_UP] = bHolding;
+		}
+		else if (m_Controllers[_whichOne].buttons[DPAD_UP] == bHolding)
+		{
 			m_arrButtonPressTimers[_whichOne][DPAD_UP] += m_Lastdt;
-			if (m_arrButtonPressTimers[_whichOne][DPAD_UP] >= 0.2f)
+			if (m_arrButtonPressTimers[_whichOne][DPAD_UP] >= 0.4f)
 				m_Controllers[_whichOne].buttons[DPAD_UP] = bHeld;
 		}
 
@@ -312,8 +316,12 @@ void ThreeSixty::HandleButtonTiming(int _whichOne /*= 0*/)
 		}
 		else if (m_Controllers[_whichOne].buttons[DPAD_DOWN] == bPress)
 		{
+			m_Controllers[_whichOne].buttons[DPAD_DOWN] = bHolding;
+		}
+		else if (m_Controllers[_whichOne].buttons[DPAD_DOWN] == bHolding)
+		{
 			m_arrButtonPressTimers[_whichOne][DPAD_DOWN] += m_Lastdt;
-			if (m_arrButtonPressTimers[_whichOne][DPAD_DOWN] >= 0.2f)
+			if (m_arrButtonPressTimers[_whichOne][DPAD_DOWN] >= 0.4f)
 				m_Controllers[_whichOne].buttons[DPAD_DOWN] = bHeld;
 		}
 
@@ -333,8 +341,12 @@ void ThreeSixty::HandleButtonTiming(int _whichOne /*= 0*/)
 		}
 		else if (m_Controllers[_whichOne].buttons[DPAD_LEFT] == bPress)
 		{
+			m_Controllers[_whichOne].buttons[DPAD_LEFT] = bHolding;
+		}
+		else if (m_Controllers[_whichOne].buttons[DPAD_LEFT] == bHolding)
+		{
 			m_arrButtonPressTimers[_whichOne][DPAD_LEFT] += m_Lastdt;
-			if (m_arrButtonPressTimers[_whichOne][DPAD_LEFT] >= 0.2f)
+			if (m_arrButtonPressTimers[_whichOne][DPAD_LEFT] >= 0.4f)
 				m_Controllers[_whichOne].buttons[DPAD_LEFT] = bHeld;
 		}
 
@@ -354,8 +366,12 @@ void ThreeSixty::HandleButtonTiming(int _whichOne /*= 0*/)
 		}
 		else if (m_Controllers[_whichOne].buttons[DPAD_RIGHT] == bPress)
 		{
+			m_Controllers[_whichOne].buttons[DPAD_RIGHT] = bHolding;
+		}
+		else if (m_Controllers[_whichOne].buttons[DPAD_RIGHT] == bHolding)
+		{
 			m_arrButtonPressTimers[_whichOne][DPAD_RIGHT] += m_Lastdt;
-			if (m_arrButtonPressTimers[_whichOne][DPAD_RIGHT] >= 0.2f)
+			if (m_arrButtonPressTimers[_whichOne][DPAD_RIGHT] >= 0.4f)
 				m_Controllers[_whichOne].buttons[DPAD_RIGHT] = bHeld;
 		}
 

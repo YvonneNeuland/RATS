@@ -364,6 +364,7 @@ void ResultState::ShowHud()
 	// Update game information, save it to file
 	gameData->LevelSave();
 	gameData->SaveGame();
+	gameData->CheckForAllStars();
 }
 
 void ResultState::ShowDeadHud()
@@ -476,6 +477,7 @@ void ResultState::Handle360Input()
 	// Select button (A)
 	// Start Button pressed: Save and Exit
 	if (tmpPad.buttons[buttonList::A] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::B] == buttonStatus::bPress ||
 		tmpPad.buttons[buttonList::START] == buttonStatus::bPress)
 	{
 		NextScreen();

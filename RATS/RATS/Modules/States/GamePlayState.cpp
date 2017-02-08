@@ -20,12 +20,14 @@
 #include "../Components/Movement/GroundFollowComponent.h"
 #include "../VFX/MeshDistorter/MeshDistorter.h"
 #include "../Molecules/MoleculeManager.h"
+#include "../Achievements/AchManager.h"
 
 extern	FFmod*		g_AudioSystem;
 extern InputController* m_controller;
 extern ThreeSixty* gamePad;
 extern D3DGraphics* globalGraphicsPointer;
 extern GameData* gameData;
+extern CAchManager* g_SteamAchievements;
 
 #define LATCH_TIMER 0.75f
 #define NUM_SCENERY 25
@@ -265,6 +267,8 @@ void GamePlayState::Exit()
 	m_Renderer->SetRenderEmitters( nullptr );
 	//SaveGame();
 
+	SteamUserStats()->StoreStats();
+
 }
 
 void GamePlayState::Initialize( Renderer* renderer )
@@ -446,7 +450,11 @@ void GamePlayState::Update( float dt )
 					m_fGamepadBuff = 0;
 				}
 			}
-			
+			if (_finite(m_fGamepadBuff) == 0)
+			{
+				std::cout << "GAMEPAD TIMER IS GARBAGE VAL!!\n";
+				m_fGamepadBuff = 0;
+			}
 		}
 		if (gamePad->LostConnection())
 		{
@@ -519,6 +527,20 @@ void GamePlayState::Update( float dt )
 				//	gameLost->m_height = 0.2f;
 				//	gameLost->m_width = 0.267f;
 				//}
+
+				// If this is the first level, ACHIEVEMENT CHECK
+				if (m_unCurrentLevel == 0)
+				{
+					if (g_SteamAchievements != nullptr)
+					{
+						if (g_SteamAchievements->m_pAchievements[EAchievements::ACH_DIE_FIRST_LEVEL].m_bAchieved == false)
+						{
+							g_SteamAchievements->m_pAchievements[EAchievements::ACH_DIE_FIRST_LEVEL].m_bAchieved = true;
+							g_SteamAchievements->SetAchievement("ACH_DIE_FIRST_LEVEL");
+							std::cout << "Triggering ACH_DIE_FIRST_LEVEL\n";
+						}
+					}
+				}
 
 
 
@@ -660,7 +682,34 @@ void GamePlayState::UpdateLevelInfo()
 			if (((m_LevelManager.GetNumLevels() - 1) > m_unCurrentLevel) == false)
 			{
 				globalGraphicsPointer->justBeatTheGame = true;
+
+				// We just beat the last level, ACHIEVEMENT CHECK
+
+				if (g_SteamAchievements != nullptr)
+				{
+					if (g_SteamAchievements->m_pAchievements[EAchievements::ACH_BEAT_ALL_LEVELS].m_bAchieved == false)
+					{
+						g_SteamAchievements->m_pAchievements[EAchievements::ACH_BEAT_ALL_LEVELS].m_bAchieved = true;
+						g_SteamAchievements->SetAchievement("ACH_BEAT_ALL_LEVELS");
+						std::cout << "Triggering ACH_BEAT_ALL_LEVELS\n";
+					}
+				}
+				
 			}
+			else if (m_unCurrentLevel == 9)
+			{
+				// We just beat the first boss level, achievement time
+				if (g_SteamAchievements != nullptr)
+				{
+					if (g_SteamAchievements->m_pAchievements[EAchievements::ACH_BEAT_BOSS_ONE].m_bAchieved == false)
+					{
+						g_SteamAchievements->m_pAchievements[EAchievements::ACH_BEAT_BOSS_ONE].m_bAchieved = true;
+						g_SteamAchievements->SetAchievement("ACH_BEAT_BOSS_ONE");
+						std::cout << "Triggering ACH_BEAT_BOSS_ONE\n";
+					}
+				}
+			}
+
 
 			// BOOKMARK : Level Complete
 			// If this works correctly, here is where you change the player status/behavior (if we attach an Ai zoom around thing or whatever)

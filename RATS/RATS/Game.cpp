@@ -67,7 +67,7 @@ void Game::Initialize(HINSTANCE hInstance)
 			// So we found the user, and we're logged in, now let's get them achievements loaded
 			else
 			{
-				g_SteamAchievements = new CAchManager(g_Achievements, 10);
+				g_SteamAchievements = new CAchManager(g_Achievements, 9, g_Stats, 6);
 			}
 		}
 	}

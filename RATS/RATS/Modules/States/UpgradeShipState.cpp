@@ -8,12 +8,14 @@
 #include "../../Wwise files/EventManager.h"
 #include "../Renderer/RenderComp.h"
 #include "../Upgrade System/GameData.h"
+#include "../Achievements/AchManager.h"
 
 extern InputController* m_controller;
 extern D3DGraphics* globalGraphicsPointer;
 extern	FFmod*		g_AudioSystem;
 extern ThreeSixty* gamePad;
 extern GameData *gameData;
+extern CAchManager* g_SteamAchievements;
 
 UpgradeShipState::UpgradeShipState()
 {
@@ -703,7 +705,13 @@ void UpgradeShipState::Update( float dt )
 			// 			}
 
 		}
+		if (_finite(fGamepadTimer) == 0)
+		{
+			std::cout << "GAMEPAD TIMER IS GARBAGE VAL!!\n";
+			fGamepadTimer = 0;
+		}
 	}
+
 
 	// Key/Mouse
 	else
@@ -1111,6 +1119,44 @@ void UpgradeShipState::SaveUpgrades()
 	gameData->m_Whip.UpdateMembers();
 
 	m_NextState = GAME_PLAY_STATE;
+
+
+	// Check for Fully Upgraded Weapon
+
+	// ACHIEVEMENT CHECK
+
+	if (g_SteamAchievements)
+	{
+		if (g_SteamAchievements->m_pAchievements[ACH_ONE_WEAPON_MAX].m_bAchieved == false)
+		{
+			// CHeck whip full
+			if (gameData->m_Whip.dmg_upgrade_num == gameData->m_Whip.dmg_upgrade_max &&
+				gameData->m_Whip.fire_rate_upgrade_num == gameData->m_Whip.fire_rate_upgrade_max)
+			{
+				g_SteamAchievements->m_pAchievements[EAchievements::ACH_ONE_WEAPON_MAX].m_bAchieved = true;
+				g_SteamAchievements->SetAchievement("ACH_ONE_WEAPON_MAX");
+				std::cout << "Triggering ACH_ONE_WEAPON_MAX\n";
+			}
+
+			// CHeck Spreadshot full
+			else if (gameData->m_Spread.dmg_upgrade_num == gameData->m_Spread.dmg_upgrade_max &&
+				gameData->m_Spread.fire_rate_upgrade_num == gameData->m_Spread.fire_rate_upgrade_max)
+			{
+				g_SteamAchievements->m_pAchievements[EAchievements::ACH_ONE_WEAPON_MAX].m_bAchieved = true;
+				g_SteamAchievements->SetAchievement("ACH_ONE_WEAPON_MAX");
+				std::cout << "Triggering ACH_ONE_WEAPON_MAX\n";
+			}
+
+			// CHeck missile full
+			else if (gameData->m_Missile.dmg_upgrade_num == gameData->m_Missile.dmg_upgrade_max &&
+				gameData->m_Missile.fire_rate_upgrade_num == gameData->m_Missile.fire_rate_upgrade_max)
+			{
+				g_SteamAchievements->m_pAchievements[EAchievements::ACH_ONE_WEAPON_MAX].m_bAchieved = true;
+				g_SteamAchievements->SetAchievement("ACH_ONE_WEAPON_MAX");
+				std::cout << "Triggering ACH_ONE_WEAPON_MAX\n";
+			}
+		}
+	}
 }
 
 // Disabling the exit button at this time
@@ -1130,8 +1176,10 @@ bool UpgradeShipState::Handle360Input()
 	bool detectedInput = false;
 
 	// Right (?)
-	if ( tmpPad.stickDir[0][stickDirections::sRight] == buttonStatus::bPress ||
-		 tmpPad.stickDir[0][stickDirections::sRight] == buttonStatus::bHeld )
+	if (tmpPad.stickDir[0][stickDirections::sRight] == buttonStatus::bPress ||
+		tmpPad.stickDir[0][stickDirections::sRight] == buttonStatus::bHeld ||
+		tmpPad.buttons[buttonList::DPAD_RIGHT] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_RIGHT] == buttonStatus::bHeld)
 	{
 		ChangeButton( m_selected_button + 1 );
 		//g_AudioSystem->PlaySound( "MENU_Hover" );
@@ -1139,8 +1187,10 @@ bool UpgradeShipState::Handle360Input()
 	}
 
 	// Left
-	if ( tmpPad.stickDir[0][stickDirections::sLeft] == buttonStatus::bPress ||
-		 tmpPad.stickDir[0][stickDirections::sLeft] == buttonStatus::bHeld )
+	if (tmpPad.stickDir[0][stickDirections::sLeft] == buttonStatus::bPress ||
+		tmpPad.stickDir[0][stickDirections::sLeft] == buttonStatus::bHeld ||
+		tmpPad.buttons[buttonList::DPAD_LEFT] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_LEFT] == buttonStatus::bHeld)
 	{
 		ChangeButton( m_selected_button - 1 );
 		//g_AudioSystem->PlaySound( "MENU_Hover" );
@@ -1148,8 +1198,10 @@ bool UpgradeShipState::Handle360Input()
 	}
 
 	// Up
-	if ( tmpPad.stickDir[0][stickDirections::sUp] == buttonStatus::bPress ||
-		 tmpPad.stickDir[0][stickDirections::sUp] == buttonStatus::bHeld )
+	if (tmpPad.stickDir[0][stickDirections::sUp] == buttonStatus::bPress ||
+		tmpPad.stickDir[0][stickDirections::sUp] == buttonStatus::bHeld  ||
+		tmpPad.buttons[buttonList::DPAD_UP]		 == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_UP] == buttonStatus::bHeld )
 	{
 		ChangeButton( m_selected_button - 4 );
 		//g_AudioSystem->PlaySound( "MENU_Hover" );
@@ -1157,8 +1209,10 @@ bool UpgradeShipState::Handle360Input()
 	}
 
 	// Down
-	if ( tmpPad.stickDir[0][stickDirections::sDown] == buttonStatus::bPress ||
-		 tmpPad.stickDir[0][stickDirections::sDown] == buttonStatus::bHeld )
+	if (tmpPad.stickDir[0][stickDirections::sDown] == buttonStatus::bPress ||
+		tmpPad.stickDir[0][stickDirections::sDown] == buttonStatus::bHeld ||
+		tmpPad.buttons[buttonList::DPAD_DOWN] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_DOWN] == buttonStatus::bHeld)
 	{
 		ChangeButton( m_selected_button + 4 );
 		//g_AudioSystem->PlaySound( "MENU_Hover" );
@@ -1178,6 +1232,12 @@ bool UpgradeShipState::Handle360Input()
 	if ( tmpPad.buttons[buttonList::START] == buttonStatus::bPress )
 	{
 		SaveUpgrades();
+		detectedInput = true;
+	}
+
+	if (tmpPad.buttons[buttonList::B] == buttonStatus::bPress)
+	{
+		ChangeButton(Exit_USS);
 		detectedInput = true;
 	}
 
@@ -1217,7 +1277,7 @@ void UpgradeShipState::HilightButton( int button )
 		m_vButtons[m_selected_button]->SetID( "resumeGameButton" );
 	}
 
-	else if ( m_selected_button == Exit_USS )
+	else if ( m_selected_button == Exit_USS && button != Exit_USS)
 	{
 		m_vButtons[m_selected_button]->SetID( "backToMainMenuButton" );
 	}

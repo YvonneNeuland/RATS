@@ -165,6 +165,11 @@ void SoundOptionState::Update(float dt)
 // 			}
 		}
 	}
+	if (_finite(fGamepadTimer) == 0)
+	{
+		std::cout << "GAMEPAD TIMER IS GARBAGE VAL!!\n";
+		fGamepadTimer = 0;
+	}
 
 	SetSelectButton();
 	UpdateSliderBars();
@@ -1070,8 +1075,10 @@ bool SoundOptionState::Handle360Input()
 	GamePad tmpPad = gamePad->GetState();
 	bool detectedInput = false;
 
-	if (tmpPad.stickDir[0][stickDirections::sUp] == buttonStatus::bPress ||
-		tmpPad.stickDir[0][stickDirections::sUp] == buttonStatus::bHeld)
+	if (tmpPad.stickDir[0][stickDirections::sUp] == buttonStatus::bPress || 
+		tmpPad.stickDir[0][stickDirections::sUp] == buttonStatus::bHeld  ||
+		tmpPad.buttons[buttonList::DPAD_UP]		 == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_UP] == buttonStatus::bHeld )
 	{
 		SetCurrentButton(m_unCurrentButton - 1);
 		//g_AudioSystem->PostEvent(AK::EVENTS::PLAY_MENU_HOVER);
@@ -1080,7 +1087,9 @@ bool SoundOptionState::Handle360Input()
 	}
 
 	if (tmpPad.stickDir[0][stickDirections::sDown] == buttonStatus::bPress ||
-		tmpPad.stickDir[0][stickDirections::sDown] == buttonStatus::bHeld)
+		tmpPad.stickDir[0][stickDirections::sDown] == buttonStatus::bHeld  ||
+		tmpPad.buttons[buttonList::DPAD_DOWN]	   == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_DOWN]	   == buttonStatus::bHeld)
 	{
 		SetCurrentButton(m_unCurrentButton + 1);
 		//g_AudioSystem->PostEvent(AK::EVENTS::PLAY_MENU_HOVER);
@@ -1090,14 +1099,18 @@ bool SoundOptionState::Handle360Input()
 
 	//
 	if (tmpPad.stickDir[0][stickDirections::sRight] == buttonStatus::bPress ||
-		tmpPad.stickDir[0][stickDirections::sRight] == buttonStatus::bHeld)
+		tmpPad.stickDir[0][stickDirections::sRight] == buttonStatus::bHeld ||
+		tmpPad.buttons[buttonList::DPAD_RIGHT] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_RIGHT] == buttonStatus::bHeld)
 	{
 		TurnVolumeUp();
 		detectedInput = true;
 	}
 
 	if (tmpPad.stickDir[0][stickDirections::sLeft] == buttonStatus::bPress ||
-		tmpPad.stickDir[0][stickDirections::sLeft] == buttonStatus::bHeld)
+		tmpPad.stickDir[0][stickDirections::sLeft] == buttonStatus::bHeld ||
+		tmpPad.buttons[buttonList::DPAD_LEFT] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_LEFT] == buttonStatus::bHeld)
 	{
 		TurnVolumeDown();
 		detectedInput = true;
@@ -1109,6 +1122,19 @@ bool SoundOptionState::Handle360Input()
 		m_NextState = m_SelectedState;
 		//g_AudioSystem->PostEvent(AK::EVENTS::PLAY_MENU_HOVER);
 		g_AudioSystem->PlaySound("MENU_Hover");
+		detectedInput = true;
+	}
+
+	if (tmpPad.buttons[buttonList::B] == buttonStatus::bPress)
+	{
+		if (m_unCurrentButton != 2)
+		{
+			m_unCurrentButton = 2;
+			g_AudioSystem->PlaySound("MENU_Back");
+
+		}
+
+
 		detectedInput = true;
 	}
 

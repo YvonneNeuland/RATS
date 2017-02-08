@@ -33,5 +33,11 @@ public:
 	void HandleReactionAggre(ColliderComp& _lhs, ColliderComp& _rhs);
 	void PushBack(ColliderComp& _lhs, ColliderComp& _rhs, bool _extra = false);
 	void PushBackStatic(ColliderComp& _static, ColliderComp& _dynamic);
+
+	void HandleAchHazards();
+	void HandleAchSpread();
+	void HandleAchWhip();
+	void HandleAchMissile();
+
 };
 

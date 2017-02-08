@@ -168,6 +168,11 @@ void LevelSelectState::Update(float dt)
 
 		}
 	}
+	if (_finite(fGamepadTimer) == 0)
+	{
+		std::cout << "GAMEPAD TIMER IS GARBAGE VAL!!\n";
+		fGamepadTimer = 0;
+	}
 	
 	m_ObjectManager.Update(dt);
 	UpdateButtons();
@@ -913,28 +918,36 @@ bool LevelSelectState::Handle360Input()
 	bool detectedInput = false;
 
 	if (tmpPad.stickDir[0][stickDirections::sLeft] == buttonStatus::bPress ||
-		tmpPad.stickDir[0][stickDirections::sLeft] == buttonStatus::bHeld)
+		tmpPad.stickDir[0][stickDirections::sLeft] == buttonStatus::bHeld ||
+		tmpPad.buttons[buttonList::DPAD_LEFT] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_LEFT] == buttonStatus::bHeld)
 	{
 		OnArrowLeft(tmpArgs);
 		detectedInput = true;
 	}
 
 	if (tmpPad.stickDir[0][stickDirections::sRight] == buttonStatus::bPress ||
-		tmpPad.stickDir[0][stickDirections::sRight] == buttonStatus::bHeld)
+		tmpPad.stickDir[0][stickDirections::sRight] == buttonStatus::bHeld ||
+		tmpPad.buttons[buttonList::DPAD_RIGHT] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_RIGHT] == buttonStatus::bHeld)
 	{
 		OnArrowRight(tmpArgs);
 		detectedInput = true;
 	}
 
 	if (tmpPad.stickDir[0][stickDirections::sDown] == buttonStatus::bPress ||
-		tmpPad.stickDir[0][stickDirections::sDown] == buttonStatus::bHeld)
+		tmpPad.stickDir[0][stickDirections::sDown] == buttonStatus::bHeld ||
+		tmpPad.buttons[buttonList::DPAD_DOWN] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_DOWN] == buttonStatus::bHeld)
 	{
 		OnArrowDown(tmpArgs);
 		detectedInput = true;
 	}
 
 	if (tmpPad.stickDir[0][stickDirections::sUp] == buttonStatus::bPress ||
-		tmpPad.stickDir[0][stickDirections::sUp] == buttonStatus::bHeld)
+		tmpPad.stickDir[0][stickDirections::sUp] == buttonStatus::bHeld ||
+		tmpPad.buttons[buttonList::DPAD_UP] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_UP] == buttonStatus::bHeld)
 	{
 		OnArrowUp(tmpArgs);
 		detectedInput = true;

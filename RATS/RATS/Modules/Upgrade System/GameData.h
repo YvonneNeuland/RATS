@@ -43,6 +43,11 @@ public:
 	// ONLY CALL IF YOU REALLY WANNA DO IT
 	void ResetGame();
 
+
+	// ACHIEVEMENT STUFF
+
+	void CheckForAllStars();
+
 // private:
 
 public:

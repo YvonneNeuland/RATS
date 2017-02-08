@@ -148,6 +148,12 @@ void OptionsMenuState::Update(float dt)
 // 			}
 		}
 	}
+	if (_finite(fGamepadTimer) == 0)
+	{
+		std::cout << "GAMEPAD TIMER IS GARBAGE VAL!!\n";
+		fGamepadTimer = 0;
+	}
+
 	SetSelectButton();
 
 	//switch out the menu navigation instructions if GamepadInstructions are showing and the mouse/keyboard are being used
@@ -670,7 +676,9 @@ bool OptionsMenuState::Handle360Input()
 	bool detectedInput = false;
 
 	if (tmpPad.stickDir[0][stickDirections::sUp] == buttonStatus::bPress ||
-		tmpPad.stickDir[0][stickDirections::sUp] == buttonStatus::bHeld)
+		tmpPad.stickDir[0][stickDirections::sUp] == buttonStatus::bHeld ||
+		tmpPad.buttons[buttonList::DPAD_UP] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_UP] == buttonStatus::bHeld)
 	{
 		SetCurrentButton(m_unCurrentButton - 1);
 		g_AudioSystem->PlaySound("MENU_Hover");
@@ -678,7 +686,9 @@ bool OptionsMenuState::Handle360Input()
 	}
 
 	if (tmpPad.stickDir[0][stickDirections::sDown] == buttonStatus::bPress ||
-		tmpPad.stickDir[0][stickDirections::sDown] == buttonStatus::bHeld)
+		tmpPad.stickDir[0][stickDirections::sDown] == buttonStatus::bHeld ||
+		tmpPad.buttons[buttonList::DPAD_DOWN] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::DPAD_DOWN] == buttonStatus::bHeld)
 	{
 		SetCurrentButton(m_unCurrentButton + 1);
 		g_AudioSystem->PlaySound("MENU_Hover");
@@ -693,6 +703,23 @@ bool OptionsMenuState::Handle360Input()
 		detectedInput = true;
 	}
 
+	if (tmpPad.buttons[buttonList::B] == buttonStatus::bPress)
+	{
+		if (m_unCurrentButton != 4)
+		{
+			m_unCurrentButton = 4;
+			g_AudioSystem->PlaySound("MENU_Back");
+			//SetSelectButton();
+		}
+			
+// 		else if (m_unCurrentButton == 4)
+// 		{
+// 			g_AudioSystem->PlaySound("MENU_Back");
+// 			m_NextState = m_SelectedState;
+// 		}
+
+		detectedInput = true;
+	}
 	return detectedInput;
 }
 

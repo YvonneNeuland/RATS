@@ -101,6 +101,7 @@ void CreditsState::Update( float dt )
 	// Select button (A)
 	// Start Button pressed: Save and Exit
 	if (tmpPad.buttons[buttonList::A] == buttonStatus::bPress ||
+		tmpPad.buttons[buttonList::B] == buttonStatus::bPress ||
 		tmpPad.buttons[buttonList::START] == buttonStatus::bPress)
 	{
 		m_NextState = MAIN_MENU_STATE;

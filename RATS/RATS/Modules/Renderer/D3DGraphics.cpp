@@ -1524,7 +1524,7 @@ void D3DGraphics::MakeWindow(HINSTANCE hInstance, WNDPROC proc)
 	wndClass.hInstance = m_hInst;
 	wndClass.hCursor = LoadCursor(NULL, IDC_ARROW);
 	//wndClass.hbrBackground = (HBRUSH)(COLOR_WINDOWFRAME);
-	//wndClass.hIcon = LoadIcon(m_hInst, MAKEINTRESOURCE(IDI_EXCLAMATION));
+	wndClass.hIcon = LoadIcon(m_hInst, MAKEINTRESOURCE(IDI_RATS));
 	//wndClass.hIconSm = LoadIcon(m_hInst, MAKEINTRESOURCE(IDI_WINLOGO));
 	wndClass.hIconSm = LoadIcon(m_hInst, MAKEINTRESOURCE(IDI_RATS));
 	//wc.hIconSm = (HICON)LoadImage(m_hInst, "theicon", IMAGE_ICON, 32, 32, LR_DEFAULTCOLOR);
